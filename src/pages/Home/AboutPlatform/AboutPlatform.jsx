@@ -4,7 +4,7 @@ import illustration from "../../../assets/undraw_team_spirit_re_yl1v.svg";
 const AboutPlatform = () => {
   return (
     <div>
-      <div className="lg:grid lg:grid-cols-2 justify-center items-center h-screen max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center max-w-6xl mx-auto lg:h-screen py-7 px-4 lg:p-0 gap-6">
         <div>
           <h1 className="text-5xl font-bold mb-3">
             Transforming Your <br /> Daily Commute

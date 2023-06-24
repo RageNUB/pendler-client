@@ -3,10 +3,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
+import MarketUpdate from "../MarketUpdate/MarketUpdate";
 
 const Articles = () => {
   return (
-    <div className="h-screen">
+    <div className="">
       <div className="max-w-6xl mx-auto mt-8">
         <h1 className="text-5xl font-bold mb-3">
           Insights and Updates <br /> on Ridesharing
@@ -18,21 +19,26 @@ const Articles = () => {
         spaceBetween={30}
         loop={true}
         autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper max-w-6xl mx-auto"
+        className="mySwiper max-w-7xl mx-auto"
       >
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4">
+          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
             <div>
-              <h1 className="text-4xl font-bold text-primary mb-2">John Smith</h1>
-              <h3 className="text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, tempora!</h3>
+              <h1 className="text-4xl font-bold text-primary mb-2">
+                John Smith
+              </h1>
+              <h3 className="text-lg font-medium">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                tempora!
+              </h3>
               <p className="text-lg mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus amet possimus voluptas vero eius in necessitatibus
@@ -46,8 +52,12 @@ const Articles = () => {
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
               <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">Why Pendler ?</button>
-                <button className="btn btn-primary rounded-3xl">How Pendler Works</button>
+                <button className="btn btn-primary rounded-3xl">
+                  Why Pendler ?
+                </button>
+                <button className="btn btn-primary rounded-3xl">
+                  How Pendler Works
+                </button>
               </div>
             </div>
             <div>
@@ -60,10 +70,15 @@ const Articles = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4">
+          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
             <div>
-              <h1 className="text-4xl font-bold text-primary mb-2">John Smith</h1>
-              <h3 className="text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, tempora!</h3>
+              <h1 className="text-4xl font-bold text-primary mb-2">
+                John Smith
+              </h1>
+              <h3 className="text-lg font-medium">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                tempora!
+              </h3>
               <p className="text-lg mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus amet possimus voluptas vero eius in necessitatibus
@@ -77,8 +92,12 @@ const Articles = () => {
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
               <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">Why Pendler ?</button>
-                <button className="btn btn-primary rounded-3xl">How Pendler Works</button>
+                <button className="btn btn-primary rounded-3xl">
+                  Why Pendler ?
+                </button>
+                <button className="btn btn-primary rounded-3xl">
+                  How Pendler Works
+                </button>
               </div>
             </div>
             <div>
@@ -91,10 +110,15 @@ const Articles = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4">
+          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
             <div>
-              <h1 className="text-4xl font-bold text-primary mb-2">John Smith</h1>
-              <h3 className="text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, tempora!</h3>
+              <h1 className="text-4xl font-bold text-primary mb-2">
+                John Smith
+              </h1>
+              <h3 className="text-lg font-medium">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                tempora!
+              </h3>
               <p className="text-lg mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus amet possimus voluptas vero eius in necessitatibus
@@ -108,8 +132,12 @@ const Articles = () => {
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
               <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">Why Pendler ?</button>
-                <button className="btn btn-primary rounded-3xl">How Pendler Works</button>
+                <button className="btn btn-primary rounded-3xl">
+                  Why Pendler ?
+                </button>
+                <button className="btn btn-primary rounded-3xl">
+                  How Pendler Works
+                </button>
               </div>
             </div>
             <div>
@@ -122,10 +150,15 @@ const Articles = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4">
+          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
             <div>
-              <h1 className="text-4xl font-bold text-primary mb-2">John Smith</h1>
-              <h3 className="text-lg font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, tempora!</h3>
+              <h1 className="text-4xl font-bold text-primary mb-2">
+                John Smith
+              </h1>
+              <h3 className="text-lg font-medium">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure,
+                tempora!
+              </h3>
               <p className="text-lg mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus amet possimus voluptas vero eius in necessitatibus
@@ -139,8 +172,12 @@ const Articles = () => {
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
               <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">Why Pendler ?</button>
-                <button className="btn btn-primary rounded-3xl">How Pendler Works</button>
+                <button className="btn btn-primary rounded-3xl">
+                  Why Pendler ?
+                </button>
+                <button className="btn btn-primary rounded-3xl">
+                  How Pendler Works
+                </button>
               </div>
             </div>
             <div>
@@ -152,8 +189,8 @@ const Articles = () => {
             </div>
           </div>
         </SwiperSlide>
-
       </Swiper>
+      <MarketUpdate></MarketUpdate>
     </div>
   );
 };

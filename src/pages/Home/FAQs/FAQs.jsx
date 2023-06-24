@@ -1,7 +1,7 @@
 const FAQs = () => {
   return (
     <div className="bg-slate-900">
-      <div className="lg:grid lg:grid-cols-2 gap-5 justify-center items-center h-screen max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center lg:items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto">
         <div>
           <h1 className="text-5xl font-bold mb-3 text-white">
             Solving the Problems of <br /> Traditional Ridesharing
@@ -12,7 +12,7 @@ const FAQs = () => {
             Pendler addresses them to provide a superior service.
           </p>
         </div>
-        <div className="space-y-2 h-3/4 overflow-y-scroll no-scrollbar">
+        <div className="space-y-2 h-1/2 lg:h-3/4 overflow-y-scroll no-scrollbar">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"

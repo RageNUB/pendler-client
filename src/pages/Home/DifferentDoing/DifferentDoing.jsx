@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const DifferentDoing = () => {
   return (
     <div className="bg-slate-900">
-      <div className="lg:grid lg:grid-cols-2 justify-center items-center h-screen max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 gap-6 max-w-6xl mx-auto">
         <div>
           <h1 className="text-5xl font-bold mb-3 text-white">
           Redefining the <br /> Ridesharing Experience

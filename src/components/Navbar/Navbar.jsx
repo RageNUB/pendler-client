@@ -27,23 +27,36 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
+              }
+              to="/"
+            >
+              <span>Home</span>
+            </NavLink>
+          </li>
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
+              }
+              to="/about"
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
+              }
+              to="/earlyBird"
+            >
+              Early Bird
+            </NavLink>
+          </li>
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">
@@ -52,10 +65,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-xl font-medium">
-          <li className="">
+          <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-primary" : ""
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
               }
               to="/"
             >
@@ -65,11 +78,21 @@ const Navbar = () => {
           <li className="">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-primary" : "text-base-100"
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
               }
               to="/about"
             >
               About Us
+            </NavLink>
+          </li>
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
+              }
+              to="/earlyBird"
+            >
+              Early Bird
             </NavLink>
           </li>
         </ul>
