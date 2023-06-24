@@ -27,13 +27,13 @@ const EarlyBirdForm = () => {
           <div className="flex justify-center mt-5 text-white">
             <button
               onClick={handleDrive}
-              className={`btn ${drive ? "btn-primary" : "btn-ghost"}`}
+              className={`btn rounded-3xl ${drive ? "btn-primary" : "btn-ghost"}`}
             >
               Apply To Drive
             </button>
             <button
               onClick={handleRide}
-              className={`btn ${ride ? "btn-primary" : "btn-ghost"}`}
+              className={`btn rounded-3xl ${ride ? "btn-primary" : "btn-ghost"}`}
             >
               Sign Up to Ride
             </button>

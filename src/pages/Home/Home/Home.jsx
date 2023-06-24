@@ -1,4 +1,5 @@
 import AboutPlatform from "../AboutPlatform/AboutPlatform";
+import Articles from "../Articles/Articles";
 import DifferentDoing from "../DifferentDoing/DifferentDoing";
 import DriverBenefits from "../DriverBenefits/DriverBenefits";
 import EarlyBirdForm from "../EarlyBirdForm/EarlyBirdForm";
@@ -16,6 +17,7 @@ const Home = () => {
             <DriverBenefits></DriverBenefits>
             <OurTeam></OurTeam>
             <FAQs></FAQs>
+            <Articles></Articles>
         </div>
     );
 };
