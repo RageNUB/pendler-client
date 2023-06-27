@@ -112,6 +112,16 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
                 }
+                to="/our-story"
+              >
+                Our Story
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
                 to="/articles"
               >
                 Articles
@@ -123,8 +133,8 @@ const Navbar = () => {
           <img className="w-36 -mt-10" src={logo} alt="" />
         </a>
       </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="flex justify-between items-center gap-2 lg:gap-5 lg:space-x-8 px-1 lg:px-3 text-xl font-medium text-base-100">
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex items-center gap-2 lg:gap-5 lg:space-x-8 px-1 lg:px-3 text-xl font-medium text-base-100">
             <li>
               <NavLink
                 className={({ isActive }) =>
@@ -183,6 +193,16 @@ const Navbar = () => {
                 to="/articles"
               >
                 Articles
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/our-story"
+              >
+                Our Story
               </NavLink>
             </li>
           </ul>
