@@ -3,9 +3,9 @@ import logo from "../../assets/logoText.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-900">
-        <div className="navbar max-w-7xl mx-auto">
-      <div className="navbar-start">
+    <div className="bg-slate-900 max-w-6xl mx-auto rounded-3xl">
+      <div className="navbar">
+        <div className="navbar-start bg-slate-900">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -27,7 +27,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li className="">
+            {/* <li className="">
             <NavLink
               className={({ isActive }) =>
                 isActive ? "text-primary" : "text-base-100 hover:text-primary"
@@ -56,36 +56,28 @@ const Navbar = () => {
             >
               Early Bird
             </NavLink>
-          </li>
-          </ul>
-        </div>
-        <a className="btn btn-ghost normal-case text-xl">
-          <img className="w-36 -mt-10" src={logo} alt="" />
-        </a>
-      </div>
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-xl font-medium">
+          </li> */}
           <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-primary" : "text-base-100 hover:text-primary"
-              }
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="">
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-primary" : "text-base-100 hover:text-primary"
-              }
-              to="/about"
-            >
-              About Us
-            </NavLink>
-          </li>
-          <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/about-us"
+              >
+                About Us
+              </NavLink>
+            </li>
+            {/* <li className="">
             <NavLink
               className={({ isActive }) =>
                 isActive ? "text-primary" : "text-base-100 hover:text-primary"
@@ -94,10 +86,108 @@ const Navbar = () => {
             >
               Early Bird
             </NavLink>
-          </li>
-        </ul>
+          </li> */}
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/drivers"
+              >
+                Drivers
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/users"
+              >
+                Users
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/articles"
+              >
+                Articles
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <a className="btn btn-ghost normal-case text-xl">
+          <img className="w-36 -mt-10" src={logo} alt="" />
+        </a>
       </div>
-    </div>
+        <div className="navbar-end hidden lg:flex">
+          <ul className="flex justify-between items-center gap-2 lg:gap-5 lg:space-x-8 px-1 lg:px-3 text-xl font-medium text-base-100">
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/about-us"
+              >
+                About Us
+              </NavLink>
+            </li>
+            {/* <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary" : "text-base-100 hover:text-primary"
+              }
+              to="/earlyBird"
+            >
+              Early Bird
+            </NavLink>
+          </li> */}
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/drivers"
+              >
+                Drivers
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/users"
+              >
+                Users
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/articles"
+              >
+                Articles
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

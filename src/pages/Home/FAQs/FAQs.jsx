@@ -1,6 +1,6 @@
 const FAQs = () => {
   return (
-    <div className="bg-slate-900">
+    <div className="bg-slate-900 rounded-3xl">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center lg:items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto">
         <div>
           <h1 className="text-5xl font-bold mb-3 text-white">
@@ -18,11 +18,46 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            How does Pendler work?
+              1. How does PENDLER work?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio sed sapiente odio pariatur quod tempora! Nam non mollitia labore iure.
+                PENDLER is a ride-sharing platform that connects customers with
+                reliable drivers. Customers can book rides through our
+                user-friendly app, and drivers can accept and complete those
+                rides, ensuring a seamless experience for all.
+              </p>
+            </div>
+          </div>
+          {/* <div
+            tabIndex={0}
+            className="collapse collapse-arrow border border-base-300 bg-base-200"
+          >
+            <div className="collapse-title text-xl font-medium">
+              Who is pendler ?
+            </div>
+            <div className="collapse-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
+              </p>
+            </div>
+          </div> */}
+          <div
+            tabIndex={0}
+            className="collapse collapse-arrow border border-base-300 bg-base-200"
+          >
+            <div className="collapse-title text-xl font-medium">
+              2. What makes PENDLER different from other ride-sharing platforms?
+            </div>
+            <div className="collapse-content">
+              <p>
+                At PENDLER, we prioritize both customers and drivers. We offer a
+                low commission model, ensuring drivers earn more while customers
+                enjoy affordable rides. Our subscription system provides drivers
+                with a steady flow of customers, enhancing their earning
+                potential and Work satisfaction.
               </p>
             </div>
           </div>
@@ -31,11 +66,14 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            Who is pendler ?
+              3. How can I become a driver on PENDLER?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                To become a driver on PENDLER, simply sign up on our website and
+                complete the registration process. Our team will review your
+                application, and once approved, you can start accepting ride
+                requests and earning money.
               </p>
             </div>
           </div>
@@ -44,11 +82,15 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            What makes Pendler different from other ride-hailing platforms?
+              4. What are the benefits of being a PENDLER driver?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                As a PENDLER driver, you&apos;ll enjoy numerous benefits, including
+                higher earnings, a flexible schedule, access to our exclusive
+                driver perks and rewards, and a supportive community of fellow
+                drivers. We value your success and aim to provide you with the
+                best experience in the ride-sharing industry.
               </p>
             </div>
           </div>
@@ -57,11 +99,13 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            How can I sign up as a driver on Pendler?
+              5. How does the subscription system for drivers work?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
               </p>
             </div>
           </div>
@@ -70,11 +114,14 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            What are the requirements to become a driver on Pendler?
+             6. What are the benefits of Pendler&apos;s subscription system for
+              drivers?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
               </p>
             </div>
           </div>
@@ -83,11 +130,13 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            How does the subscription system for drivers work?
+             7. How does the referral program work?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
               </p>
             </div>
           </div>
@@ -96,11 +145,13 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            What are the benefits of Pendler&apos;s subscription system for drivers?
+             8. Can I use Pendler for both personal and carpooling rides?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
               </p>
             </div>
           </div>
@@ -109,37 +160,13 @@ const FAQs = () => {
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-            How does the referral program work?
+             9. How can I book a ride on Pendler?
             </div>
             <div className="collapse-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
-              </p>
-            </div>
-          </div>
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-            Can I use Pendler for both personal and carpooling rides?
-            </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
-              </p>
-            </div>
-          </div>
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-            How can I book a ride on Pendler?
-            </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a placeat inventore officiis explicabo non nostrum facere aperiam, vitae eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
+                placeat inventore officiis explicabo non nostrum facere aperiam,
+                vitae eius.
               </p>
             </div>
           </div>

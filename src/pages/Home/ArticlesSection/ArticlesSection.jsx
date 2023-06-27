@@ -5,10 +5,10 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import MarketUpdate from "../MarketUpdate/MarketUpdate";
 
-const Articles = () => {
+const ArticlesSection = () => {
   return (
-    <div className="">
-      <div className="max-w-6xl mx-auto mt-8">
+    <div className="bg-base-200 rounded-3xl px-4 lg:px-0">
+      <div className="max-w-6xl mx-auto pt-8">
         <h1 className="text-5xl font-bold mb-3">
           Insights and Updates <br /> on Ridesharing
         </h1>
@@ -30,7 +30,14 @@ const Articles = () => {
         className="mySwiper max-w-7xl mx-auto"
       >
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+            <div>
+              <img
+                className="rounded-lg shadow-xl"
+                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
+                alt=""
+              />
+            </div>
             <div>
               <h1 className="text-4xl font-bold text-primary mb-2">
                 John Smith
@@ -51,26 +58,18 @@ const Articles = () => {
                 obcaecati quibusdam cupiditate earum nemo aut reprehenderit odit
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
-              <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">
-                  Why Pendler ?
-                </button>
-                <button className="btn btn-primary rounded-3xl">
-                  How Pendler Works
-                </button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="rounded-lg"
-                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
-                alt=""
-              />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+            <div>
+              <img
+                className="rounded-lg shadow-xl"
+                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
+                alt=""
+              />
+            </div>
             <div>
               <h1 className="text-4xl font-bold text-primary mb-2">
                 John Smith
@@ -91,26 +90,18 @@ const Articles = () => {
                 obcaecati quibusdam cupiditate earum nemo aut reprehenderit odit
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
-              <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">
-                  Why Pendler ?
-                </button>
-                <button className="btn btn-primary rounded-3xl">
-                  How Pendler Works
-                </button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="rounded-lg"
-                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
-                alt=""
-              />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+            <div>
+              <img
+                className="rounded-lg shadow-xl"
+                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
+                alt=""
+              />
+            </div>
             <div>
               <h1 className="text-4xl font-bold text-primary mb-2">
                 John Smith
@@ -131,26 +122,18 @@ const Articles = () => {
                 obcaecati quibusdam cupiditate earum nemo aut reprehenderit odit
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
-              <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">
-                  Why Pendler ?
-                </button>
-                <button className="btn btn-primary rounded-3xl">
-                  How Pendler Works
-                </button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="rounded-lg"
-                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
-                alt=""
-              />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+            <div>
+              <img
+                className="rounded-lg shadow-xl"
+                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
+                alt=""
+              />
+            </div>
             <div>
               <h1 className="text-4xl font-bold text-primary mb-2">
                 John Smith
@@ -171,21 +154,6 @@ const Articles = () => {
                 obcaecati quibusdam cupiditate earum nemo aut reprehenderit odit
                 dolores nobis numquam repellat, exercitationem deleniti!
               </p>
-              <div className="mt-5 flex gap-4">
-                <button className="btn btn-primary rounded-3xl">
-                  Why Pendler ?
-                </button>
-                <button className="btn btn-primary rounded-3xl">
-                  How Pendler Works
-                </button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="rounded-lg"
-                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
-                alt=""
-              />
             </div>
           </div>
         </SwiperSlide>
@@ -195,4 +163,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default ArticlesSection;
