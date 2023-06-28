@@ -1,10 +1,21 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logoText.png";
+import { useState } from "react";
 
-const Navbar = () => {
+const NavbarHome = () => {
+    const [fix, setFix] = useState(false)
+    
+    const setFixed = () => {
+        if(window.scrollY >= 730) {
+            setFix(true)
+        } else {
+            setFix(false)
+        }
+    }
+    window.addEventListener("scroll", setFixed)
 
   return (
-    <div className="bg-slate-900 max-w-7xl mx-auto rounded-3xl sticky top-0 z-50">
+    <div className={fix ? `bg-slate-900 shadow-xl max-w-[1450px] fixed top-0 rounded-3xl w-full z-50` : `bg-slate-900 shadow-xl max-w-[1450px] rounded-3xl w-full z-50`}>
       <div className="navbar">
         <div className="navbar-start">
         <div className="dropdown">
@@ -166,4 +177,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarHome;

@@ -7,7 +7,7 @@ import MarketUpdate from "../MarketUpdate/MarketUpdate";
 
 const ArticlesSection = () => {
   return (
-    <div className="bg-base-200 rounded-3xl px-4 lg:px-0">
+    <div id="articles" className="bg-base-200 rounded-3xl px-4 lg:px-0">
       <div className="max-w-6xl mx-auto pt-8">
         <h1 className="text-5xl font-bold mb-3">
           Insights and Updates <br /> on Ridesharing
@@ -30,10 +30,10 @@ const ArticlesSection = () => {
         className="mySwiper max-w-7xl mx-auto"
       >
         <SwiperSlide>
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 max-w-6xl mx-auto">
             <div>
               <img
-                className="rounded-lg shadow-xl"
+                className="rounded-lg"
                 src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
                 alt=""
               />
@@ -62,10 +62,10 @@ const ArticlesSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 max-w-6xl mx-auto">
             <div>
               <img
-                className="rounded-lg shadow-xl"
+                className="rounded-lg"
                 src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
                 alt=""
               />
@@ -94,10 +94,10 @@ const ArticlesSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 max-w-6xl mx-auto">
             <div>
               <img
-                className="rounded-lg shadow-xl"
+                className="rounded-lg"
                 src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
                 alt=""
               />
@@ -126,10 +126,10 @@ const ArticlesSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 max-w-6xl mx-auto">
             <div>
               <img
-                className="rounded-lg shadow-xl"
+                className="rounded-lg"
                 src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1687602162~exp=1687602762~hmac=cb4b58a1d1c9569c8f4ae7aff7b2229f1095f483c22dfa319c0ce56e2597abfa"
                 alt=""
               />

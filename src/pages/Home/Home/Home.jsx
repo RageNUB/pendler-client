@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Navbar from "../../../components/Navbar/Navbar";
 import AboutPlatform from "../AboutPlatform/AboutPlatform";
 import Articles from "../ArticlesSection/ArticlesSection";
 import Banner from "../Banner/Banner";
@@ -16,12 +15,13 @@ const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   return (
     <div>
       <Banner></Banner>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <Navbar></Navbar>
-      </div>
+      </div> */}
       <div data-aos="fade-up">
         <DifferentDoing></DifferentDoing>
       </div>

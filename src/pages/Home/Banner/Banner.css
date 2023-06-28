@@ -1,5 +1,7 @@
 .banner {
-    background-image: url("https://img.freepik.com/premium-vector/taxi-app-illustrated-concept_23-2148506375.jpg?w=996");
-    /* width: 100%;
-    height: 100vh; */
+    background-image: url("../../../assets/banner.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }

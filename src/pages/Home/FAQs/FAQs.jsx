@@ -1,18 +1,25 @@
+import { AttentionSeeker, Slide } from "react-awesome-reveal";
+
 const FAQs = () => {
   return (
     <div className="bg-slate-900 rounded-3xl">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center lg:items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto">
         <div>
-          <h1 className="text-5xl font-bold mb-3 text-white">
-            Solving the Problems of <br /> Traditional Ridesharing
-          </h1>
+          <Slide direction="left">
+            <h1 className="text-5xl font-bold mb-3 text-white">
+              Solving the Problems of <br /> Traditional Ridesharing
+            </h1>
+          </Slide>
           <hr className="h-2.5 w-36 bg-primary mb-12" />
-          <p className="text-2xl break-words mb-5 text-base-300 font-normal">
-            Discover the common challenges faced by other platforms and how
-            Pendler addresses them to provide a superior service.
-          </p>
+          <AttentionSeeker effect="pulse">
+            <p className="text-2xl break-words mb-5 text-base-300 font-normal">
+              Discover the common challenges faced by other platforms and how
+              Pendler addresses them to provide a superior service.
+            </p>
+          </AttentionSeeker>
         </div>
         <div className="space-y-2 h-1/2 lg:h-3/4 overflow-y-scroll no-scrollbar">
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
@@ -29,21 +36,8 @@ const FAQs = () => {
               </p>
             </div>
           </div>
-          {/* <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              Who is pendler ?
-            </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div> */}
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
@@ -61,6 +55,8 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
@@ -77,6 +73,8 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
@@ -86,14 +84,16 @@ const FAQs = () => {
             </div>
             <div className="collapse-content">
               <p>
-                As a PENDLER driver, you&apos;ll enjoy numerous benefits, including
-                higher earnings, a flexible schedule, access to our exclusive
-                driver perks and rewards, and a supportive community of fellow
-                drivers. We value your success and aim to provide you with the
-                best experience in the ride-sharing industry.
+                As a PENDLER driver, you&apos;ll enjoy numerous benefits,
+                including higher earnings, a flexible schedule, access to our
+                exclusive driver perks and rewards, and a supportive community
+                of fellow drivers. We value your success and aim to provide you
+                with the best experience in the ride-sharing industry.
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
@@ -109,12 +109,14 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-             6. What are the benefits of Pendler&apos;s subscription system for
+              6. What are the benefits of Pendler&apos;s subscription system for
               drivers?
             </div>
             <div className="collapse-content">
@@ -125,12 +127,14 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-             7. How does the referral program work?
+              7. How does the referral program work?
             </div>
             <div className="collapse-content">
               <p>
@@ -140,12 +144,14 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-             8. Can I use Pendler for both personal and carpooling rides?
+              8. Can I use Pendler for both personal and carpooling rides?
             </div>
             <div className="collapse-content">
               <p>
@@ -155,12 +161,14 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
+          <Slide direction="right">
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div className="collapse-title text-xl font-medium">
-             9. How can I book a ride on Pendler?
+              9. How can I book a ride on Pendler?
             </div>
             <div className="collapse-content">
               <p>
@@ -170,6 +178,7 @@ const FAQs = () => {
               </p>
             </div>
           </div>
+          </Slide>
         </div>
       </div>
     </div>
