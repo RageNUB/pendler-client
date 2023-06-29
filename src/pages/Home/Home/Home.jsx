@@ -40,10 +40,10 @@ const Home = () => {
       <div data-aos="fade-up">
         <FAQs></FAQs>
       </div>
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <Articles></Articles>
       </div>
-      <VideoSection></VideoSection>
+      <VideoSection></VideoSection> */}
     </div>
   );
 };

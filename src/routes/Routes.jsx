@@ -22,7 +22,7 @@ const router = createBrowserRouter([
                 element: <OurStory></OurStory>
             },
             {
-                path: "earlyBird",
+                path: "early-bird",
                 element: <EarlyBird></EarlyBird>
             },
             {

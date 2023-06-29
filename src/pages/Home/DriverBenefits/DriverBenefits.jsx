@@ -3,7 +3,7 @@ import illustration from "../../../assets/undraw_city_driver_re_9xyv.svg";
 
 const DriverBenefits = () => {
   return (
-    <div className="bg-slate-900 rounded-3xl">
+    <div className="bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto gap-6">
         <div>
           <img className="w-[39rem]" src={illustration} alt="" />

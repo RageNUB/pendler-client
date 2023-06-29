@@ -2,7 +2,7 @@ import { AttentionSeeker, Slide } from "react-awesome-reveal";
 
 const FAQs = () => {
   return (
-    <div className="bg-slate-900 rounded-3xl">
+    <div className="bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-center lg:items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto">
         <div>
           <Slide direction="left">

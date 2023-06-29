@@ -3,7 +3,7 @@ import { Slide, AttentionSeeker } from "react-awesome-reveal";
 
 const DifferentDoing = () => {
   return (
-    <div className="bg-slate-900 mt-3 rounded-3xl">
+    <div className="bg-slate-900 mt-3">
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 gap-6 max-w-6xl mx-auto">
         <div>
           <img className="w-[39rem]" src={illustration} alt="" />

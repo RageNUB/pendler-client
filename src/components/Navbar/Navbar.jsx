@@ -4,7 +4,7 @@ import logo from "../../assets/logoText.png";
 const Navbar = () => {
 
   return (
-    <div className="bg-slate-900 max-w-7xl mx-auto rounded-3xl sticky top-0 z-50">
+    <div className="bg-slate-900 w-full mx-auto sticky top-0 z-50">
       <div className="navbar">
         <div className="navbar-start">
         <div className="dropdown">
@@ -38,14 +38,24 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
+            {/* <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/early-bird"
+              >
+                Early Bird
+              </NavLink>
+            </li> */}
             <li className="">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
                 }
-                to="/about-us"
+                to="/our-story"
               >
-                About Us
+                Our Story
               </NavLink>
             </li>
             <li className="">
@@ -68,17 +78,7 @@ const Navbar = () => {
                 Users
               </NavLink>
             </li>
-            <li className="">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
-                }
-                to="/our-story"
-              >
-                Our Story
-              </NavLink>
-            </li>
-            <li className="">
+            {/* <li className="">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
@@ -87,14 +87,14 @@ const Navbar = () => {
               >
                 Articles
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">
           <img className="w-36 -mt-10" src={logo} alt="" />
         </a>
       </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-end hidden lg:flex">
           <ul className="flex items-center gap-2 lg:gap-5 lg:space-x-8 px-1 lg:px-3 text-xl font-medium text-base-100">
             <li>
               <NavLink
@@ -106,14 +106,24 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
+            {/* <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/early-bird"
+              >
+                Early Bird
+              </NavLink>
+            </li> */}
             <li className="">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
                 }
-                to="/about-us"
+                to="/our-story"
               >
-                About Us
+                Our Story
               </NavLink>
             </li>
             <li className="">
@@ -139,7 +149,7 @@ const Navbar = () => {
             {/* <li className="hover:border-b-4 border-primary pb-1">
               <a className="" href="#articles">Articles</a>
             </li> */}
-            <li className="">
+            {/* <li className="">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
@@ -148,17 +158,7 @@ const Navbar = () => {
               >
                 Articles
               </NavLink>
-            </li>
-            <li className="">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
-                }
-                to="/our-story"
-              >
-                Our Story
-              </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

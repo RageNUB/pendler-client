@@ -7,7 +7,7 @@ import MarketUpdate from "../MarketUpdate/MarketUpdate";
 
 const ArticlesSection = () => {
   return (
-    <div id="articles" className="bg-base-200 rounded-3xl px-4 lg:px-0">
+    <div id="articles" className="bg-base-200 px-4 lg:px-0">
       <div className="max-w-6xl mx-auto pt-8">
         <h1 className="text-5xl font-bold mb-3">
           Insights and Updates <br /> on Ridesharing
