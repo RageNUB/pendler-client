@@ -10,14 +10,22 @@ import VideoSection from "../VideoSection/VideoSection";
 import WhyPendler from "../WhyPendler/WhyPendler";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+
   return (
     <div>
+      <Helmet>
+        <title>Pendler | Home</title>
+      </Helmet>
       <Banner></Banner>
       {/* <div data-aos="fade-up">
         <Navbar></Navbar>

@@ -2,10 +2,19 @@ import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/undraw_order_ride_re_372k.svg";
 import illustration2 from "../../assets/undraw_subway_-7-vh7.svg";
 import illustration3 from "../../assets/undraw_access_account_re_8spm.svg"
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const Users = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+  
   return (
     <div>
+      <Helmet>
+        <title>Pendler | Users</title>
+      </Helmet>
       <Navbar></Navbar>
       <div>
         <div className="bg-slate-900">
@@ -108,12 +117,12 @@ const Users = () => {
           </div>
         </div>
       </div>
-      <div className="bg-slate-900 rounded-3xl">
+      <div className="bg-slate-900">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto gap-6">
-          <div className="col-span-2">
+          <div className="col-span-2 order-2 lg:order-1">
             <img className="w-[39rem]" src={illustration2} alt="" />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-3 order-1 lg:order-2">
             <h1 className="text-4xl font-bold mb-3 text-white">
               Choose Pendler, Support Drivers: Drive with Purpose and Make a
               Difference

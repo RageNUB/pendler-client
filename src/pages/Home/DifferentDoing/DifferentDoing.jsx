@@ -5,10 +5,10 @@ const DifferentDoing = () => {
   return (
     <div className="bg-slate-900 mt-3">
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 gap-6 max-w-6xl mx-auto">
-        <div>
+        <div className="order-2 lg:order-1">
           <img className="w-[39rem]" src={illustration} alt="" />
         </div>
-        <div>
+        <div className="order-1 lg:order-2">
           <Slide direction="right">
             <h1 className="text-5xl font-bold mb-3 text-white">
               Discover a Seamless <br /> Ride Experience

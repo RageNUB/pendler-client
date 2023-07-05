@@ -18,7 +18,7 @@ const FAQs = () => {
             </p>
           </AttentionSeeker>
         </div>
-        <div className="space-y-2 h-1/2 lg:h-3/4 overflow-y-scroll no-scrollbar">
+        <div className="space-y-2 h-1/2 lg:h-3/4 lg:overflow-y-scroll no-scrollbar">
           <Slide direction="right">
           <div
             tabIndex={0}

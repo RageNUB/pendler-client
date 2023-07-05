@@ -1,10 +1,19 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/undraw_city_driver_re_9xyv.svg";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const Drivers = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+  
   return (
     <div>
+      <Helmet>
+        <title>Pendler | Drivers</title>
+      </Helmet>
       <Navbar></Navbar>
       <div>
         <div className="bg-slate-900">
@@ -124,7 +133,7 @@ const Drivers = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto -mt-8">
+      <div className="max-w-6xl mx-auto lg:-mt-8 px-4 mt-5">
         <h3 className="text-4xl font-bold text-center mb-8">
           Unlocking Opportunities for Drivers{" "}
         </h3>

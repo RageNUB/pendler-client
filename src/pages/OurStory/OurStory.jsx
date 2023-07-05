@@ -2,10 +2,19 @@ import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/undraw_order_ride_re_372k.svg";
 import illustration2 from "../../assets/undraw_team_spirit_re_yl1v.svg";
 import OurTeam from "../Home/OurTeam/OurTeam";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const OurStory = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+  
   return (
     <div>
+      <Helmet>
+        <title>Pendler | Our Story</title>
+      </Helmet>
       <Navbar></Navbar>
       <div className="text-center mt-10 space-y-5">
         <h1 className="text-4xl font-bold">Revolutionizing Ride-Sharing</h1>
@@ -36,12 +45,12 @@ const OurStory = () => {
           </div>
         </div>
       </div>
-      <div className="bg-slate-900 mt-8 rounded-3xl">
+      <div className="bg-slate-900 mt-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 gap-6 max-w-6xl mx-auto">
-          <div className="col-span-2">
+          <div className="col-span-2 order-2 lg:order-1">
             <img className="w-[39rem]" src={illustration2} alt="" />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-3 order-1 lg:order-2">
             <h1 className="text-5xl font-bold mb-3 text-white">
               Future of the Pendler
             </h1>
@@ -58,7 +67,7 @@ const OurStory = () => {
           </div>
         </div>
       </div>
-      <div className="mt-14 max-w-6xl mx-auto">
+      <div className="mt-14 max-w-6xl mx-auto px-4">
         <h1 className="text-5xl font-bold text-center">Our Story</h1>
         <h3 className="text-3xl font-bold mt-10">
           Passionate Minds Driving Innovation: Our Founders&apos; Story{" "}

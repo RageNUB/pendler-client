@@ -119,7 +119,7 @@ const Navbar = () => {
             <li className="">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
                 }
                 to="/our-story"
               >
