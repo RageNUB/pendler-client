@@ -7,6 +7,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Drivers from "../pages/Drivers/Drivers";
 import Users from "../pages/Users/Users";
 import Articles from "../pages/Articles/Articles";
+import JoinUs from "../pages/JoinUs/JoinUs";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "users",
                 element: <Users></Users>
+            },
+            {
+                path: "join-us",
+                element: <JoinUs></JoinUs>
             },
             {
                 path: "articles",

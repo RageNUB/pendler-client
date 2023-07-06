@@ -78,6 +78,16 @@ const Navbar = () => {
                 Users
               </NavLink>
             </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary" : "hover:border-b-4 border-primary"
+                }
+                to="/join-us"
+              >
+                Join Us
+              </NavLink>
+            </li>
             {/* <li className="">
               <NavLink
                 className={({ isActive }) =>
@@ -144,6 +154,16 @@ const Navbar = () => {
                 to="/users"
               >
                 Users
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "border-b-4 border-primary pb-1" : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/join-us"
+              >
+                Join Us
               </NavLink>
             </li>
             {/* <li className="hover:border-b-4 border-primary pb-1">

@@ -20,164 +20,165 @@ const FAQs = () => {
         </div>
         <div className="space-y-2 h-1/2 lg:h-3/4 lg:overflow-y-scroll no-scrollbar">
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              1. How does PENDLER work?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                1. How does PENDLER work?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  PENDLER is a ride-sharing platform that connects customers
+                  with reliable drivers. Customers can book rides through our
+                  user-friendly app, and drivers can accept and complete those
+                  rides, ensuring a seamless experience for all.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                PENDLER is a ride-sharing platform that connects customers with
-                reliable drivers. Customers can book rides through our
-                user-friendly app, and drivers can accept and complete those
-                rides, ensuring a seamless experience for all.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              2. What makes PENDLER different from other ride-sharing platforms?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                2. What makes PENDLER different from other ride-sharing
+                platforms?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  At PENDLER, we prioritize both customers and drivers. We offer
+                  a low commission model, ensuring drivers earn more while
+                  customers enjoy affordable rides. Our subscription system
+                  provides drivers with a steady flow of customers, enhancing
+                  their earning potential and Work satisfaction.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                At PENDLER, we prioritize both customers and drivers. We offer a
-                low commission model, ensuring drivers earn more while customers
-                enjoy affordable rides. Our subscription system provides drivers
-                with a steady flow of customers, enhancing their earning
-                potential and Work satisfaction.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              3. How can I become a driver on PENDLER?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                3. How can I become a driver on PENDLER?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  To become a driver on PENDLER, simply sign up on our website
+                  and complete the registration process. Our team will review
+                  your application, and once approved, you can start accepting
+                  ride requests and earning money.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                To become a driver on PENDLER, simply sign up on our website and
-                complete the registration process. Our team will review your
-                application, and once approved, you can start accepting ride
-                requests and earning money.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              4. What are the benefits of being a PENDLER driver?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                4. What are the benefits of being a PENDLER driver?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  As a PENDLER driver, you&apos;ll enjoy numerous benefits,
+                  including higher earnings, a flexible schedule, access to our
+                  exclusive driver perks and rewards, and a supportive community
+                  of fellow drivers. We value your success and aim to provide
+                  you with the best experience in the ride-sharing industry.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                As a PENDLER driver, you&apos;ll enjoy numerous benefits,
-                including higher earnings, a flexible schedule, access to our
-                exclusive driver perks and rewards, and a supportive community
-                of fellow drivers. We value your success and aim to provide you
-                with the best experience in the ride-sharing industry.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              5. How does the subscription system for drivers work?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                5. How does the subscription system for drivers work?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  The subscription system for drivers provides a range of
+                  benefits, including a steady stream of customers, increased
+                  earnings, and priority access to ride requests. Drivers can
+                  choose from daily, weekly, or monthly plans and receive the
+                  full fare amount from each ride without any commission fees
+                  deducted. They can track their earnings in real-time, withdraw
+                  instantly or at regular intervals, and have the opportunity to
+                  build a successful ride-sharing business with stability and
+                  control over their earnings.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              6. What are the benefits of Pendler&apos;s subscription system for
-              drivers?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                6. What are the benefits of Pendler&apos;s subscription system
+                for drivers?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  The subscription system for drivers in Pendler offers
+                  increased earnings, as drivers keep their full earnings
+                  without any commission deducted. It provides a steady stream
+                  of customers, priority access to ride requests, flexibility in
+                  choosing subscription plans, financial stability, control and
+                  ownership over earnings, support and training, and a
+                  driver-centric model that prioritizes their success and
+                  satisfaction.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              7. How does the referral program work?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                7. How does the referral program work?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  The referral program in Pendler works by incentivizing both
+                  drivers and riders to bring new users to the platform. When a
+                  driver refers a new rider to Pendler, they earn a referral
+                  bonus of 1% from the rider&apos;s earnings. Similarly, when a rider
+                  refers a new driver to Pendler, they also earn a referral
+                  bonus of 1% from the driver&apos;s earnings. This creates a
+                  mutually beneficial system where both drivers and riders are
+                  rewarded for promoting Pendler and helping to grow the
+                  community.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div>
           </Slide>
           <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              8. Can I use Pendler for both personal and carpooling rides?
+            <div
+              tabIndex={0}
+              className="collapse collapse-arrow border border-base-300 bg-base-200"
+            >
+              <div className="collapse-title text-xl font-medium">
+                8. How can I book a ride on Pendler?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  a placeat inventore officiis explicabo non nostrum facere
+                  aperiam, vitae eius.
+                </p>
+              </div>
             </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div>
-          </Slide>
-          <Slide direction="right">
-          <div
-            tabIndex={0}
-            className="collapse collapse-arrow border border-base-300 bg-base-200"
-          >
-            <div className="collapse-title text-xl font-medium">
-              9. How can I book a ride on Pendler?
-            </div>
-            <div className="collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a
-                placeat inventore officiis explicabo non nostrum facere aperiam,
-                vitae eius.
-              </p>
-            </div>
-          </div>
           </Slide>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Users = () => {
       <div>
         <div className="bg-slate-900">
           <h1 className="text-4xl font-bold text-center pt-2 text-white">
-            Sign Up to Ride
+          Sign Up As Rider (Early Access)
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
             <div>

@@ -17,7 +17,7 @@ const OurStory = () => {
       </Helmet>
       <Navbar></Navbar>
       <div className="text-center mt-10 space-y-5">
-        <h1 className="text-4xl font-bold">Revolutionizing Ride-Sharing</h1>
+        <h1 className="text-4xl font-bold uppercase">Revolutionizing Ride-Sharing</h1>
         <p className="text-lg">
           Our mission is to provide a socially responsible and cost-effective
           ride-sharing platform <br />
@@ -29,7 +29,7 @@ const OurStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center max-w-6xl mx-auto lg:h-screen py-7 px-4 lg:p-0 gap-6">
           <div className="col-span-3">
             <h1 className="text-5xl font-bold mb-3">
-              Why pendler is different?
+              Why Pendler is different?
             </h1>
             <hr className="h-2.5 w-36 bg-primary mb-12" />
             <p className="text-2xl break-words mb-5 text-[#666d7c] font-normal">
@@ -70,7 +70,7 @@ const OurStory = () => {
       <div className="mt-14 max-w-6xl mx-auto px-4">
         <h1 className="text-5xl font-bold text-center">Our Story</h1>
         <h3 className="text-3xl font-bold mt-10">
-          Passionate Minds Driving Innovation: Our Founders&apos; Story{" "}
+        How Pendler&apos;s Journey Took Its Shape
         </h3>
         <div className="space-y-5 text-lg mt-8">
           <p>

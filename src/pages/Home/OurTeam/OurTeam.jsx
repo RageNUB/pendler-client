@@ -3,6 +3,7 @@ import CEO from "../../../assets/CEO.jpg"
 import COO from "../../../assets/COO.jpg"
 import CTO from "../../../assets/CTO.jpg"
 import Co_Founder1 from "../../../assets/Co_Founder1.jpg"
+import Co_Founder2 from "../../../assets/Co_Founder2.jpg.jpeg"
 import { FaUserAlt } from "react-icons/fa";
 
 const OurTeam = ({ title }) => {
@@ -65,7 +66,7 @@ const OurTeam = ({ title }) => {
             <div className="flex flex-col items-center">
               <img
                 className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
-                src=""
+                src={Co_Founder2}
                 alt=""
               />
               <h2 className="text-xl font-bold mt-3">Vaibhav</h2>

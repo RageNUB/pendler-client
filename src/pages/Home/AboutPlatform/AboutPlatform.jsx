@@ -8,7 +8,7 @@ const AboutPlatform = () => {
         <div>
           <Slide direction="left">
           <h1 className="text-5xl font-bold mb-3">
-            The most cost-effective <br /> commuting solution
+            The Most Cost-Effective <br /> Commuting Solution
           </h1>
           </Slide>
           <hr className="h-2.5 w-36 bg-primary mb-12" />
