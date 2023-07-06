@@ -1,5 +1,5 @@
 import { AttentionSeeker, Slide } from "react-awesome-reveal";
-import illustration from "../../../assets/undraw_city_driver_re_9xyv.svg";
+import illustration from "../../../assets/undraw_winners_re_wr1l.svg";
 
 const DriverBenefits = () => {
   return (

@@ -1,5 +1,6 @@
 import { AttentionSeeker, Slide } from "react-awesome-reveal";
-import illustration from "../../../assets/undraw_team_spirit_re_yl1v.svg";
+// import illustration from "../../../assets/"
+import illustration from "../../../assets/undraw_savings_re_eq4w.svg"
 
 const AboutPlatform = () => {
   return (

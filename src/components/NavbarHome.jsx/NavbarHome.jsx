@@ -115,7 +115,7 @@ const NavbarHome = () => {
           <img className="w-36 -mt-10" src={logo} alt="" />
         </a>
       </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-center hidden lg:flex">
           <ul className="flex items-center gap-2 lg:gap-5 lg:space-x-8 px-1 lg:px-3 text-xl font-medium text-base-100">
             <li>
               <NavLink

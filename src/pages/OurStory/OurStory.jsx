@@ -7,9 +7,9 @@ import { useEffect } from "react";
 
 const OurStory = () => {
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
-  
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -17,7 +17,9 @@ const OurStory = () => {
       </Helmet>
       <Navbar></Navbar>
       <div className="text-center mt-10 space-y-5">
-        <h1 className="text-4xl font-bold uppercase">Revolutionizing Ride-Sharing</h1>
+        <h1 className="text-4xl font-bold uppercase">
+          Revolutionizing Ride-Sharing
+        </h1>
         <p className="text-lg">
           Our mission is to provide a socially responsible and cost-effective
           ride-sharing platform <br />
@@ -68,9 +70,12 @@ const OurStory = () => {
         </div>
       </div>
       <div className="mt-14 max-w-6xl mx-auto px-4">
-        <h1 className="text-5xl font-bold text-center">Our Story</h1>
+        <div className="flex flex-col justify-center items-center gap-4">
+          <h1 className="text-5xl font-bold text-center">Our Story</h1>
+          <hr className="h-2.5 w-36 bg-primary mb-12" />
+        </div>
         <h3 className="text-3xl font-bold mt-10">
-        How Pendler&apos;s Journey Took Its Shape
+          How Pendler&apos;s Journey Took Its Shape
         </h3>
         <div className="space-y-5 text-lg mt-8">
           <p>

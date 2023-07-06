@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
+import Scroll from "../components/Scroll/Scroll";
 
 const Main = () => {
     useEffect( () => {
@@ -9,6 +11,8 @@ const Main = () => {
     return (
         <div>
             <Outlet></Outlet>
+            <Footer></Footer>
+            <Scroll></Scroll>
         </div>
     );
 };

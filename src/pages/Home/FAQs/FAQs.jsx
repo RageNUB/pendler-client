@@ -153,12 +153,12 @@ const FAQs = () => {
                   The referral program in Pendler works by incentivizing both
                   drivers and riders to bring new users to the platform. When a
                   driver refers a new rider to Pendler, they earn a referral
-                  bonus of 1% from the rider&apos;s earnings. Similarly, when a rider
-                  refers a new driver to Pendler, they also earn a referral
-                  bonus of 1% from the driver&apos;s earnings. This creates a
-                  mutually beneficial system where both drivers and riders are
-                  rewarded for promoting Pendler and helping to grow the
-                  community.
+                  bonus of 1% from the rider&apos;s earnings. Similarly, when a
+                  rider refers a new driver to Pendler, they also earn a
+                  referral bonus of 1% from the driver&apos;s earnings. This
+                  creates a mutually beneficial system where both drivers and
+                  riders are rewarded for promoting Pendler and helping to grow
+                  the community.
                 </p>
               </div>
             </div>
@@ -173,9 +173,11 @@ const FAQs = () => {
               </div>
               <div className="collapse-content">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  a placeat inventore officiis explicabo non nostrum facere
-                  aperiam, vitae eius.
+                  Pendler is coming soon to Hyderabad so Stay tuned for the
+                  official launch, Be among the first to enjoy the benefits of
+                  our innovative ride-sharing platform. Sign up for updates and
+                  be part of the Pendler community as we transform the way you
+                  commute.
                 </p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
-import illustration from "../../assets/undraw_order_ride_re_372k.svg";
-import illustration2 from "../../assets/undraw_subway_-7-vh7.svg";
+import illustration from "../../assets/undraw_referral_re_0aji.svg";
+import illustration2 from "../../assets/Taxi Driver_Monochromatic.svg";
 import illustration3 from "../../assets/undraw_access_account_re_8spm.svg"
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
@@ -28,7 +28,7 @@ const Users = () => {
             <div>
               { (
                 <form className="max-w-xl mx-auto px-5">
-                  <div className=" mt-2 mb-3">
+                  <div className=" mt-2 mb-3 space-y-2">
                     <p className="text-lg font-medium text-primary text-center">
                       Personal Info
                     </p>

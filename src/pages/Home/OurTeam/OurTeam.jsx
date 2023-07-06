@@ -11,10 +11,10 @@ const OurTeam = ({ title }) => {
     <div className="mt-6 mb-10">
       {title && (
         <h1 className="text-5xl font-bold mb-3 text-center">
-          Passionate Minds Driving Innovation
+          <span className="bg-slate-900 text-white px-5 py-2 rounded-3xl">Passionate Minds Driving Innovation</span>
         </h1>
       )}
-      <div className="flex flex-col gap-10 mt-14">
+      <div className="flex flex-col gap-10 mt-16">
         <div className="flex flex-col lg:flex-row justify-center gap-16">
           <Fade direction="left">
             <div className="flex flex-col items-center">

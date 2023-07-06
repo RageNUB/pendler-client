@@ -1,14 +1,14 @@
 import Navbar from "../../components/Navbar/Navbar";
-import illustration from "../../assets/undraw_city_driver_re_9xyv.svg";
+import illustration from "../../assets/Taxi Driver_Isometric.svg";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
 const Drivers = () => {
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
-  
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -17,17 +17,23 @@ const Drivers = () => {
       <Navbar></Navbar>
       <div>
         <div className="bg-slate-900">
-          <h1 className="text-4xl font-bold text-center pt-2 text-white">
-          Apply To Drive ( Early Access)
-          </h1>
+          <div className="max-w-6xl w-full mx-auto text-center">
+            <h1 className="text-4xl font-bold text-center pt-2 text-white mb-6">
+              Apply To Drive ( Early Access)
+            </h1>
+            <p className="text-lg text-white">
+              Be among the first to enjoy the benefits of our innovative
+              ride-sharing platform. Sign up for <br /> updates and be part of the
+              Pendler community as we transform the way you commute.
+            </p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
             <div>
               <img src={illustration2} alt="" />
             </div>
             <div>
-              (
               <form className="max-w-xl mx-auto px-5">
-                <div className=" mt-2 mb-3">
+                <div className=" mt-2 mb-3 space-y-2">
                   <p className="text-lg font-medium text-primary text-center">
                     Personal Info
                   </p>
@@ -106,15 +112,14 @@ const Drivers = () => {
                   </label>
                 </div>
               </form>
-              )
             </div>
           </div>
         </div>
       </div>
       <div className=" flex flex-col justify-center lg:h-screen py-7 px-4 lg:p-0">
-      <h1 className="text-5xl font-bold text-center mt-14 mb-10">
-        Drive with Purpose, Earn with Pride.
-      </h1>
+        <h1 className="text-5xl font-bold text-center mt-14 mb-10">
+          Drive with Purpose, Earn with Pride.
+        </h1>
         <h3 className="text-4xl font-bold text-center mb-8">0% commission</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center max-w-6xl mx-auto  gap-6">
           <div>
