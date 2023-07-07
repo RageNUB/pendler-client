@@ -4,6 +4,7 @@ import illustration2 from "../../assets/undraw_team_spirit_re_yl1v.svg";
 import OurTeam from "../Home/OurTeam/OurTeam";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import LazyLoad from "react-lazy-load";
 
 const OurStory = () => {
   useEffect(() => {
@@ -43,14 +44,18 @@ const OurStory = () => {
             </p>
           </div>
           <div className="col-span-2">
-            <img className="w-[39rem]" src={illustration} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration} alt="" />
+            </LazyLoad>
           </div>
         </div>
       </div>
       <div className="bg-slate-900 mt-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 gap-6 max-w-6xl mx-auto">
           <div className="col-span-2 order-2 lg:order-1">
-            <img className="w-[39rem]" src={illustration2} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration2} alt="" />
+            </LazyLoad>
           </div>
           <div className="col-span-3 order-1 lg:order-2">
             <h1 className="text-5xl font-bold mb-3 text-white">

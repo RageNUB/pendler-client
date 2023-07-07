@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration2 from "../../assets/undraw_personal_opinions_re_qw29.svg";
 import { useEffect } from "react";
+import LazyLoad from "react-lazy-load";
 
 const JoinUs = () => {
   useEffect(() => {
@@ -91,7 +92,9 @@ const JoinUs = () => {
             </form>
           </div>
           <div>
+            <LazyLoad>
             <img src={illustration2} alt="" />
+            </LazyLoad>
           </div>
         </div>
       </div>

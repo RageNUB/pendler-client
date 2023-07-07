@@ -3,6 +3,7 @@ import illustration from "../../assets/Taxi Driver_Isometric.svg";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import LazyLoad from "react-lazy-load";
 
 const Drivers = () => {
   useEffect(() => {
@@ -23,13 +24,15 @@ const Drivers = () => {
             </h1>
             <p className="text-lg text-white">
               Be among the first to enjoy the benefits of our innovative
-              ride-sharing platform. Sign up for <br /> updates and be part of the
-              Pendler community as we transform the way you commute.
+              ride-sharing platform. Sign up for <br /> updates and be part of
+              the Pendler community as we transform the way you commute.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
             <div>
-              <img src={illustration2} alt="" />
+              <LazyLoad>
+                <img src={illustration2} alt="" />
+              </LazyLoad>
             </div>
             <div>
               <form className="max-w-xl mx-auto px-5">
@@ -116,7 +119,7 @@ const Drivers = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col justify-center lg:h-screen py-7 px-4 lg:p-0">
+      <div className=" flex flex-col justify-center lg:h-screen py-7 px-4 lg:p-0 lg:mb-20">
         <h1 className="text-5xl font-bold text-center mt-14 mb-10">
           Drive with Purpose, Earn with Pride.
         </h1>
@@ -134,11 +137,13 @@ const Drivers = () => {
             </p>
           </div>
           <div>
-            <img className="w-[39rem]" src={illustration} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration} alt="" />
+            </LazyLoad>
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto lg:-mt-8 px-4 mt-5">
+      <div className="max-w-6xl mx-auto lg:-mt-8 px-4 mt-5 ">
         <h3 className="text-4xl font-bold text-center mb-8">
           Unlocking Opportunities for Drivers{" "}
         </h3>

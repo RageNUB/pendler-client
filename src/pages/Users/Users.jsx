@@ -1,15 +1,16 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/undraw_referral_re_0aji.svg";
 import illustration2 from "../../assets/Taxi Driver_Monochromatic.svg";
-import illustration3 from "../../assets/undraw_access_account_re_8spm.svg"
+import illustration3 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import LazyLoad from "react-lazy-load";
 
 const Users = () => {
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
-  
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -19,14 +20,16 @@ const Users = () => {
       <div>
         <div className="bg-slate-900">
           <h1 className="text-4xl font-bold text-center pt-2 text-white">
-          Sign Up As Rider (Early Access)
+            Sign Up As Rider (Early Access)
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
             <div>
-              <img src={illustration3} alt="" />
+              <LazyLoad>
+                <img src={illustration3} alt="" />
+              </LazyLoad>
             </div>
             <div>
-              { (
+              {
                 <form className="max-w-xl mx-auto px-5">
                   <div className=" mt-2 mb-3 space-y-2">
                     <p className="text-lg font-medium text-primary text-center">
@@ -91,7 +94,7 @@ const Users = () => {
                     </label>
                   </div>
                 </form>
-              )}
+              }
             </div>
           </div>
         </div>
@@ -113,14 +116,18 @@ const Users = () => {
             </p>
           </div>
           <div className="col-span-2">
-            <img className="w-[39rem]" src={illustration} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration} alt="" />
+            </LazyLoad>
           </div>
         </div>
       </div>
       <div className="bg-slate-900">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:h-screen py-7 px-4 lg:p-0 max-w-6xl mx-auto gap-6">
           <div className="col-span-2 order-2 lg:order-1">
-            <img className="w-[39rem]" src={illustration2} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration2} alt="" />
+            </LazyLoad>
           </div>
           <div className="col-span-3 order-1 lg:order-2">
             <h1 className="text-4xl font-bold mb-3 text-white">
@@ -157,7 +164,9 @@ const Users = () => {
             </p>
           </div>
           <div className="col-span-2">
-            <img className="w-[39rem]" src={illustration} alt="" />
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration} alt="" />
+            </LazyLoad>
           </div>
         </div>
       </div>
