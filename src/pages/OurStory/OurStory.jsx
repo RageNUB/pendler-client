@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
-import illustration from "../../assets/undraw_order_ride_re_372k.svg";
-import illustration2 from "../../assets/undraw_team_spirit_re_yl1v.svg";
+import illustration from "../../assets/Sending emails_Isometric.svg";
+import illustration2 from "../../assets/Checklist_Two Color.svg";
 import OurTeam from "../Home/OurTeam/OurTeam";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
@@ -32,7 +32,7 @@ const OurStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center max-w-6xl mx-auto lg:h-screen py-7 px-4 lg:p-0 gap-6">
           <div className="col-span-3">
             <h1 className="text-5xl font-bold mb-3">
-              Why Pendler is different?
+              Why Pendler is Different?
             </h1>
             <hr className="h-2.5 w-36 bg-primary mb-12" />
             <p className="text-2xl break-words mb-5 text-[#666d7c] font-normal">

@@ -14,7 +14,7 @@ const DriverBenefits = () => {
         <div className="order-1 lg:order-2">
           <Slide direction="right">
             <h1 className="text-5xl font-bold mb-3 text-white">
-              Unlocking a new era of ride-sharing, where everyone wins.
+              Entering a new era of ride-sharing, where everyone wins.
             </h1>
           </Slide>
           <hr className="h-2.5 w-36 bg-primary mb-12" />

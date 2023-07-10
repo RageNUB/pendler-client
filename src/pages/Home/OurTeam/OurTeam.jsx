@@ -8,9 +8,9 @@ import LazyLoad from "react-lazy-load";
 
 const OurTeam = ({ title }) => {
   return (
-    <div className="mt-6 mb-10">
+    <div className="mt-12 lg:mt-6 mb-28">
       {title && (
-        <h1 className="text-5xl font-bold mb-3 text-center">
+        <h1 className="text-xl lg:text-5xl font-bold mb-3 text-center">
           <span className="bg-slate-900 text-white px-5 py-2 rounded-3xl">
             Passionate Minds Driving Innovation
           </span>
@@ -22,7 +22,7 @@ const OurTeam = ({ title }) => {
             <div className="flex flex-col items-center">
               <LazyLoad>
                 <img
-                  className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
+                  className="rounded-full w-32 h-32 lg:w-60 lg:h-60 shadow-xl hover:shadow-2xl"
                   src={CEO}
                   alt=""
                 />
@@ -35,7 +35,7 @@ const OurTeam = ({ title }) => {
             <div className="flex flex-col items-center">
               <LazyLoad>
                 <img
-                  className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
+                  className="rounded-full w-32 h-32 lg:w-60 lg:h-60 shadow-xl hover:shadow-2xl"
                   src={COO}
                   alt=""
                 />
@@ -45,16 +45,16 @@ const OurTeam = ({ title }) => {
             </div>
           </Fade>
           <Fade direction="left">
-            <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
               <LazyLoad>
                 <img
-                  className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
-                  src={CTO}
+                  className="rounded-full w-32 h-32 lg:w-60 lg:h-60 shadow-xl hover:shadow-2xl"
+                  src={Co_Founder2}
                   alt=""
                 />
               </LazyLoad>
-              <h2 className="text-xl font-bold mt-3">Prathima Kadari</h2>
-              <p>Co-Founder & CTO</p>
+              <h2 className="text-xl font-bold mt-3">Krishna Vaibhav</h2>
+              <p>Co-Founder</p>
             </div>
           </Fade>
         </div>
@@ -63,7 +63,7 @@ const OurTeam = ({ title }) => {
             <div className="flex flex-col items-center">
               <LazyLoad>
                 <img
-                  className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
+                  className="rounded-full w-32 h-32 lg:w-60 lg:h-60 shadow-xl hover:shadow-2xl"
                   src={Co_Founder1}
                   alt=""
                 />
@@ -76,13 +76,13 @@ const OurTeam = ({ title }) => {
             <div className="flex flex-col items-center">
               <LazyLoad>
                 <img
-                  className="rounded-full w-60 h-60 shadow-xl hover:shadow-2xl"
-                  src={Co_Founder2}
+                  className="rounded-full w-32 h-32 lg:w-60 lg:h-60 shadow-xl hover:shadow-2xl"
+                  src={CTO}
                   alt=""
                 />
               </LazyLoad>
-              <h2 className="text-xl font-bold mt-3">Vaibhav</h2>
-              <p>Co-Founder</p>
+              <h2 className="text-xl font-bold mt-3">Prathima Kadari</h2>
+              <p>Co-Founder & CTO</p>
             </div>
           </Fade>
         </div>

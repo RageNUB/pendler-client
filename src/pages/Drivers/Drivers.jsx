@@ -10,6 +10,32 @@ const Drivers = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // const handleFormSubmit = (event) => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const name = form.name.value;
+  //   const email = form.email.value;
+  //   const phone = form.phone.value;
+  //   const model = form.model.value;
+  //   const plateNumber = form.plateNumber.value;
+
+  //   const formData = new FormData();
+  //   formData.append("fullName", name);
+  //   formData.append("email", email);
+  //   formData.append("phone", phone);
+  //   formData.append("carmodel", model);
+  //   formData.append("platenumber", plateNumber);
+  //   console.log(formData);
+
+  //   fetch("../../pendler_new.php", {
+  //     method: "POST",
+  //     body: formData,
+  //   })
+  //     .then((res) => res.text())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.log(error));
+  // };
+
   return (
     <div>
       <Helmet>
@@ -35,7 +61,10 @@ const Drivers = () => {
               </LazyLoad>
             </div>
             <div>
-              <form className="max-w-xl mx-auto px-5">
+              <form
+                // onSubmit={handleFormSubmit}
+                className="max-w-xl mx-auto px-5"
+              >
                 <div className=" mt-2 mb-3 space-y-2">
                   <p className="text-lg font-medium text-primary text-center">
                     Personal Info

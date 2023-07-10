@@ -5,25 +5,50 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div className="w-full h-screen">
-      <div className="text-center banner flex flex-col justify-between items-center pt-8 px-2">
-        <div>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-14 mt-14 uppercase">Welcome to PENDLER</h1>
-          <p className="text-3xl font-medium mb-14 mt-4 lg:-ml-16">
-            Discover How Pendler Is <br /> Revolutionizing The Commuting Sector
-          </p>
-          <div className="flex gap-5 justify-center lg:-ml-16">
-            <Link to="/drivers">
-              <button className="btn btn-primary rounded-3xl mb-10 px-8">
-                Sign Up To Drive
-              </button>
-            </Link>
-            <Link to="/users">
-              <button className="btn btn-primary rounded-3xl mb-10 px-8">
-                Sign Up as Rider
-              </button>
-            </Link>
+      <div className="text-center banner pt-8 px-2">
+        <div className="flex rounded-e-xl">
+          <div className="bg-slate-900 w-24 flex justify-center items-center rounded-s-xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#15802a"
+              className="bi bi-megaphone-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+            </svg>
           </div>
-          
+          <div className="marquees w-full">
+              <p className="text-xl text-white bg-slate-900 rounded-3xl px-4">
+                Pendler is coming soon to Hyderabad. Stay tuned for the official
+                launch and Be among the first to enjoy the benefits of our
+                innovative ride-sharing platform
+              </p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-end">
+          <div className="mt-14 mr-10">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-14 mt-14 uppercase">
+              Welcome to PENDLER
+            </h1>
+            <p className="text-3xl font-medium mb-14 mt-4">
+              <span>Discover How Pendler Is Revolutionizing</span> <br />
+              <span>The Commuting Sector</span>
+            </p>
+            <div className="flex gap-5 justify-center">
+              <Link to="/drivers">
+                <button className="btn btn-primary rounded-3xl mb-10 px-8">
+                  Sign Up To Drive
+                </button>
+              </Link>
+              <Link to="/users">
+                <button className="btn btn-primary rounded-3xl mb-10 px-8">
+                  Sign Up as Rider
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
         {/* <p className="text-7xl text-error"><FaArrowDown></FaArrowDown></p> */}
       </div>

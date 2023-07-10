@@ -1,5 +1,5 @@
 import { AttentionSeeker, Slide } from "react-awesome-reveal";
-import illustration from "../../../assets/undraw_subway_-7-vh7.svg";
+import illustration from "../../../assets/Motivation_Two Color.svg";
 import LazyLoad from "react-lazy-load";
 
 const WhyPendler = () => {

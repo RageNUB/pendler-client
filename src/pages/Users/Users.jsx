@@ -1,7 +1,8 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/undraw_referral_re_0aji.svg";
-import illustration2 from "../../assets/Taxi Driver_Monochromatic.svg";
+import illustration2 from "../../assets/Taxi Driver_Flatline.svg";
 import illustration3 from "../../assets/undraw_access_account_re_8spm.svg";
+import illustration4 from "../../assets/Money motivation _Outline.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import LazyLoad from "react-lazy-load";
@@ -99,7 +100,7 @@ const Users = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center max-w-6xl mx-auto lg:h-screen py-7 px-4 lg:p-0 gap-6">
           <div className="col-span-3">
             <h1 className="text-4xl font-bold mb-3">
@@ -117,7 +118,7 @@ const Users = () => {
           </div>
           <div className="col-span-2">
             <LazyLoad>
-              <img className="w-[39rem]" src={illustration} alt="" />
+              <img className="w-[39rem] max-w-xl" src={illustration4} alt="" />
             </LazyLoad>
           </div>
         </div>
