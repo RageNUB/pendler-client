@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+pendler_new.php
 
 # Editor directories and files
 .vscode/*
