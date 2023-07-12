@@ -4,15 +4,61 @@ import illustration2 from "../../assets/Taxi Driver_Flatline.svg";
 import illustration3 from "../../assets/undraw_access_account_re_8spm.svg";
 import illustration4 from "../../assets/Money motivation _Outline.svg";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LazyLoad from "react-lazy-load";
 
+// function onChange(e){
+//   setValue(e.target.value);
+//   value = value.replace(/[^A-Za-z]/gi, "");
+//    console.log(e.target.value.charCodeAt(s+1));
+//   //  if()
+// }
 const Users = () => {
+  const [value,setvalue]=useState("");
+  const [value1,setvalue1]=useState("");
+  const [value2,setvalue2]=useState("");
+  const [value3,setvalue3]=useState("");
+  const [error,setError]=useState("");
+  const [num,setnum]=useState("");
+  const [cit,setcit]=useState("");
+
+   const onChange1 = (e) => {
+      const re = /^[A-Za-z]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue( e.target.value );
+        setError("");
+      }
+        else
+        setError("Only Characters allowed");
+    };
+    const onChange2 = (e) => {
+      const re = /^[0-9]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue1( e.target.value );
+        setnum("");
+      }
+        else
+        setnum("Only numbers allowed");
+    };
+
+    const onChange3= (e) => {
+      const re = /^[A-Za-z]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue2( e.target.value );
+        setcit("");
+      }
+        else
+        setcit("Only characters allowed");
+    };
+
+
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
+
     <div>
       <Helmet>
         <title>Pendler | Users</title>
@@ -38,7 +84,7 @@ const Users = () => {
                     </p>
                     <div>
                       <label>
-                        <p className="text-md font-semibold text-white">
+                        <p className="text-md font-semibold text-white" >
                           Full Name
                         </p>
                       </label>
@@ -47,8 +93,11 @@ const Users = () => {
                         name="name"
                         placeholder="Full Name"
                         className="input input-bordered input-primary w-full"
+                        onChange={onChange1}
+                        value={value}
                       />
                     </div>
+                    <p className="text-warning">{error}</p>
                     <div>
                       <label>
                         <p className="text-md font-semibold text-white">
@@ -69,12 +118,14 @@ const Users = () => {
                         </p>
                       </label>
                       <input
-                        type="text"
+                        value={value1}
                         name="phone"
                         placeholder="Phone Number"
                         className="input input-bordered input-primary w-full"
+                        onChange={onChange2}
                       />
                     </div>
+                    <p className="text-warning">{num}</p>
                     <div>
                       <label>
                         <p className="text-md font-semibold text-white">City</p>
@@ -84,8 +135,25 @@ const Users = () => {
                         name="city"
                         placeholder="City"
                         className="input input-bordered input-primary w-full"
+                        value={value2}
+                        onChange={onChange3}
                       />
                     </div>
+                    <p className="text-warning">{cit}</p>
+                    <div>
+                  <label>
+                    <p className="text-md font-semibold text-white">
+                      Comments (Optional)
+                    </p>
+                  </label>
+                  <textarea
+                    className="textarea textarea-secondary textarea-lg w-full max-w-lg"
+                    placeholder="Add your comments if any"
+                   
+                
+                  ></textarea>
+                </div>
+                {/* <p className="text-warning">{comm}</p> */}
                     <label>
                       <input
                         className="btn btn-primary text-white btn-block mt-4"

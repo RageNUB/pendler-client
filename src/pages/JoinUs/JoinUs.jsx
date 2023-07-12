@@ -1,12 +1,36 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration2 from "../../assets/undraw_personal_opinions_re_qw29.svg";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import LazyLoad from "react-lazy-load";
 
 const JoinUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [value,setvalue]=useState("");
+  const [value1,setvalue1]=useState("");
+
+  const [error,setError]=useState("");
+  const [num,setnum]=useState("");
+
+  const onChange1 = (e) => {
+    const re = /^[A-Za-z]+$/;
+    if (e.target.value === "" || re.test(e.target.value)){
+      setvalue( e.target.value );
+      setError("");
+    }
+      else
+      setError("Only Characters allowed");
+  };
+  const onChange2 = (e) => {
+    const re = /^[0-9]+$/;
+    if (e.target.value === "" || re.test(e.target.value)){
+      setvalue1( e.target.value );
+      setnum("");
+    }
+      else
+      setnum("Only numbers allowed");
+  };
 
   return (
     <div>
@@ -16,8 +40,8 @@ const JoinUs = () => {
         <p className="text-lg">
           We are a tight-knit team of innovators on a mission to radically
           transform the ride-sharing sector. For any discussions or business
-          proposals, you can drop us a mail to pendlerofficial1@gmail.com . Any queries / feedback, feel
-          free to reach out through this form. We would love to hear from you.
+          proposals,you can drop us a mail to pendlerofficial1@gmail.com. Any queries / feedback, feel
+          free to reach out to us through this form. We would love to hear from you.
         </p>
       </div>
       <div className="mt-14 bg-slate-900 h-screen grid justify-center items-center">
@@ -39,11 +63,14 @@ const JoinUs = () => {
                   </label>
                   <input
                     type="text"
+                    value={value}
+                    onChange={onChange1}
                     name="name"
                     placeholder="Your Name"
                     className="input input-bordered input-primary w-full"
                   />
                 </div>
+                <p className="text-warning">{error}</p>
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
@@ -66,10 +93,13 @@ const JoinUs = () => {
                   <input
                     type="text"
                     name="phone"
+                    value={value1}
+                    onChange={onChange2}
                     placeholder="Phone Number"
                     className="input input-bordered input-primary w-full"
                   />
                 </div>
+                <p className="text-warning">{num}</p>
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
@@ -79,8 +109,10 @@ const JoinUs = () => {
                   <textarea
                     className="textarea textarea-secondary textarea-lg w-full max-w-lg"
                     placeholder="Your Message"
+      
                   ></textarea>
                 </div>
+          
                 <label>
                   <input
                     className="btn btn-primary text-white btn-block mt-4"

@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/Taxi Driver_Isometric.svg";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect ,useState} from "react";
 import LazyLoad from "react-lazy-load";
 import "./Drivers.css";
 
@@ -10,7 +10,43 @@ const Drivers = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [value,setvalue]=useState("");
+  const [value1,setvalue1]=useState("");
+  const [value2,setvalue2]=useState("");
 
+  const [error,setError]=useState("");
+  const [num,setnum]=useState("");
+  const [plat,setplate]=useState("");
+  // const [cit,setcit]=useState("");
+
+   const onChange1 = (e) => {
+      const re = /^[A-Za-z]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue( e.target.value );
+        setError("");
+      }
+        else
+        setError("Only Characters allowed");
+    };
+    const onChange2 = (e) => {
+      const re = /^[0-9]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue1( e.target.value );
+        setnum("");
+      }
+        else
+        setnum("Only numbers allowed");
+    };
+
+    const onChange4 = (e) => {
+      const re = /^[A-Za-z0-9]+$/;
+      if (e.target.value === "" || re.test(e.target.value)){
+        setvalue2( e.target.value );
+        setplate("");
+      }
+        else
+        setplate("Only characters and numbers allowed");
+    };
   // const handleFormSubmit = (event) => {
   //   event.preventDefault();
   //   const form = event.target;
@@ -81,8 +117,11 @@ const Drivers = () => {
                       name="name"
                       placeholder="Full Name"
                       className="input input-bordered input-primary w-full"
+                      value={value}
+                      onChange={onChange1}
                     />
                   </div>
+                  <p className="text-warning">{error}</p>
                   <div>
                     <label>
                       <p className="text-md font-semibold text-white">Email</p>
@@ -102,11 +141,14 @@ const Drivers = () => {
                     </label>
                     <input
                       type="text"
+                      value={value1}
+                      onChange={onChange2}
                       name="phone"
                       placeholder="Phone Number"
                       className="input input-bordered input-primary w-full"
                     />
                   </div>
+                  <p className="text-warning">{num}</p>
                   <p className="text-lg font-medium text-primary text-center mt-3">
                     Vehicle Details
                   </p>
@@ -138,9 +180,25 @@ const Drivers = () => {
                       type="text"
                       name="plateNumber"
                       placeholder="Plate Number"
+                      value={value2}
+                      onChange={onChange4}
                       className="input input-bordered input-primary w-full"
                     />
                   </div>
+                  <p  className="text-warning">{plat}</p>
+                  <div>
+                  <label>
+                    <p className="text-md font-semibold text-white">
+                      Comments (Optional)
+                    </p>
+                  </label>
+                  <textarea
+                    className="textarea textarea-secondary textarea-lg w-full max-w-lg"
+                    placeholder="Add your comments if any"
+           
+                  ></textarea>
+                </div>
+      
                   <label>
                     <input
                       className="btn btn-primary text-white btn-block mt-4"
