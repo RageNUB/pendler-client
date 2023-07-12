@@ -3,7 +3,7 @@ import CEO from "../../../assets/CEO.jpg";
 import COO from "../../../assets/COO.jpg";
 import CTO from "../../../assets/CTO.jpg";
 import Co_Founder1 from "../../../assets/Co_Founder1.jpg";
-import Co_Founder2 from "../../../assets/Co_Founder2.jpg.jpeg";
+import Co_Founder2 from "../../../assets/Co_Founder2.jpeg";
 import LazyLoad from "react-lazy-load";
 
 const OurTeam = ({ title }) => {

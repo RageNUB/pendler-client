@@ -16,7 +16,7 @@ const JoinUs = () => {
         <p className="text-lg">
           We are a tight-knit team of innovators on a mission to radically
           transform the ride-sharing sector. For any discussions or business
-          proposals, you can drop us a mail to . Any queries / feedback, feel
+          proposals, you can drop us a mail to pendlerofficial1@gmail.com . Any queries / feedback, feel
           free to reach out through this form. We would love to hear from you.
         </p>
       </div>

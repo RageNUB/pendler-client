@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
             <a className="link link-hover text-xl font-medium">
               Email:{" "}
-              <span className="font-medium">Pendlerofficial@gmail.com</span>
+              <span className="font-medium">pendlerofficial1@gmail.com</span>
             </a>
           </div>
           <div>

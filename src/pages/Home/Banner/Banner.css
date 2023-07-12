@@ -7,7 +7,6 @@
 }
 
 .marquees {
-  height: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -17,7 +16,6 @@
   width: max-content;
   height: 100%;
   margin: 0;
-  line-height: 50px;
   text-align: center;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);

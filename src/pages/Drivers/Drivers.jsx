@@ -4,6 +4,7 @@ import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import LazyLoad from "react-lazy-load";
+import "./Drivers.css";
 
 const Drivers = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Drivers = () => {
         <div className="bg-slate-900">
           <div className="max-w-6xl w-full mx-auto text-center">
             <h1 className="text-4xl font-bold text-center pt-2 text-white mb-6">
-              Apply To Drive ( Early Access)
+              Sign Up As Driver ( Early Access)
             </h1>
             <p className="text-lg text-white">
               Be among the first to enjoy the benefits of our innovative
@@ -115,12 +116,17 @@ const Drivers = () => {
                         Car Model
                       </p>
                     </label>
-                    <input
-                      type="text"
-                      name="model"
-                      placeholder="Car Model"
-                      className="input input-bordered input-primary w-full"
-                    />
+                    <select className="select select-bordered select-primary w-full">
+                      <option disabled selected>
+                        Pick Your Car Model
+                      </option>
+                      <option>Mini ( 3 Seater)</option>
+                      <option>Hatch Back (4 Seater)</option>
+                      <option>Sedan (4+ Seater)</option>
+                      <option>Mini SUV (5 Seater)</option>
+                      <option>SUV (7 Seater)</option>
+                      <option>SUV Plus (8 Seater)</option>
+                    </select>
                   </div>
                   <div>
                     <label>
