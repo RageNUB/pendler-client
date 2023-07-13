@@ -6,6 +6,7 @@ import illustration4 from "../../assets/Money motivation _Outline.svg";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import LazyLoad from "react-lazy-load";
+import Swal from "sweetalert2";
 
 // function onChange(e){
 //   setValue(e.target.value);
@@ -14,51 +15,83 @@ import LazyLoad from "react-lazy-load";
 //   //  if()
 // }
 const Users = () => {
-  const [value,setvalue]=useState("");
-  const [value1,setvalue1]=useState("");
-  const [value2,setvalue2]=useState("");
-  const [value3,setvalue3]=useState("");
-  const [error,setError]=useState("");
-  const [num,setnum]=useState("");
-  const [cit,setcit]=useState("");
+  const [value, setvalue] = useState("");
+  const [value1, setvalue1] = useState("");
+  const [value2, setvalue2] = useState("");
+  // const [value3, setvalue3] = useState("");
+  const [error, setError] = useState("");
+  const [num, setnum] = useState("");
+  const [cit, setcit] = useState("");
 
-   const onChange1 = (e) => {
-      const re = /^[A-Za-z]+$/;
-      if (e.target.value === "" || re.test(e.target.value)){
-        setvalue( e.target.value );
-        setError("");
-      }
-        else
-        setError("Only Characters allowed");
-    };
-    const onChange2 = (e) => {
-      const re = /^[0-9]+$/;
-      if (e.target.value === "" || re.test(e.target.value)){
-        setvalue1( e.target.value );
-        setnum("");
-      }
-        else
-        setnum("Only numbers allowed");
-    };
+  const onChange1 = (e) => {
+    const re = /^[A-Za-z]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue(e.target.value);
+      setError("");
+    } else setError("Only Characters allowed");
+  };
+  const onChange2 = (e) => {
+    const re = /^[0-9]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue1(e.target.value);
+      setnum("");
+    } else setnum("Only numbers allowed");
+  };
 
-    const onChange3= (e) => {
-      const re = /^[A-Za-z]+$/;
-      if (e.target.value === "" || re.test(e.target.value)){
-        setvalue2( e.target.value );
-        setcit("");
-      }
-        else
-        setcit("Only characters allowed");
-    };
+  const onChange3 = (e) => {
+    const re = /^[A-Za-z]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue2(e.target.value);
+      setcit("");
+    } else setcit("Only characters allowed");
+  };
 
-
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const city = form.city.value;
+    const comment = form.comment.value;
 
+    const userinfo = {
+      fullName: name,
+      email: email,
+      phone: phone,
+      city: city,
+      comment: comment,
+    };
+    console.log(userinfo)
+
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userinfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Early Bird Registration Successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
+  return (
     <div>
       <Helmet>
         <title>Pendler | Users</title>
@@ -77,14 +110,14 @@ const Users = () => {
             </div>
             <div>
               {
-                <form className="max-w-xl mx-auto px-5">
+                <form onSubmit={handleFormSubmit} className="max-w-xl mx-auto px-5">
                   <div className=" mt-2 mb-3 space-y-2">
                     <p className="text-lg font-medium text-primary text-center">
                       Personal Info
                     </p>
                     <div>
                       <label>
-                        <p className="text-md font-semibold text-white" >
+                        <p className="text-md font-semibold text-white">
                           Full Name
                         </p>
                       </label>
@@ -141,19 +174,18 @@ const Users = () => {
                     </div>
                     <p className="text-warning">{cit}</p>
                     <div>
-                  <label>
-                    <p className="text-md font-semibold text-white">
-                      Comments (Optional)
-                    </p>
-                  </label>
-                  <textarea
-                    className="textarea textarea-secondary textarea-lg w-full max-w-lg"
-                    placeholder="Add your comments if any"
-                   
-                
-                  ></textarea>
-                </div>
-                {/* <p className="text-warning">{comm}</p> */}
+                      <label>
+                        <p className="text-md font-semibold text-white">
+                          Comments (Optional)
+                        </p>
+                      </label>
+                      <textarea
+                        name="comment"
+                        className="textarea textarea-secondary textarea-lg w-full max-w-lg"
+                        placeholder="Add your comments if any"
+                      ></textarea>
+                    </div>
+                    {/* <p className="text-warning">{comm}</p> */}
                     <label>
                       <input
                         className="btn btn-primary text-white btn-block mt-4"

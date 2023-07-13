@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import illustration2 from "../../assets/undraw_personal_opinions_re_qw29.svg";
 import { useEffect,useState } from "react";
 import LazyLoad from "react-lazy-load";
+import Swal from "sweetalert2";
 
 const JoinUs = () => {
   useEffect(() => {
@@ -32,6 +33,44 @@ const JoinUs = () => {
       setnum("Only numbers allowed");
   };
 
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+
+    const driverinfo = {
+      fullName: name,
+      email: email,
+      phone: phone,
+      message: message
+    };
+
+    fetch("http://localhost:5000/queries", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(driverinfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        if (data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Thank you for connect with us",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -50,7 +89,7 @@ const JoinUs = () => {
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
           <div>
-            <form className="max-w-xl mx-auto px-5">
+            <form onSubmit={handleFormSubmit} className="max-w-xl mx-auto px-5">
               <div className="mt-2 mb-3 space-y-2">
                 <p className="text-lg font-medium text-primary text-center">
                   Personal Info
@@ -107,6 +146,7 @@ const JoinUs = () => {
                     </p>
                   </label>
                   <textarea
+                  name="message"
                     className="textarea textarea-secondary textarea-lg w-full max-w-lg"
                     placeholder="Your Message"
       
