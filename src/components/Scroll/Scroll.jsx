@@ -8,7 +8,6 @@ const Scroll = () => {
   const location = useLocation();
 
   const checkScroll = () => {
-    console.log(window.scrollY)
     if(window.scrollY <= 200 && location.pathname === "/"){
       setHidden(true)
     }else if (window.scrollY >= 4400 && location.pathname === "/") {
@@ -28,7 +27,6 @@ const Scroll = () => {
     }
   };
   window.addEventListener("scroll", checkScroll);
-  console.log(hidden)
 
   const scrollToTop = () => {
     scroll.scrollToTop();
