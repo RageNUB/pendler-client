@@ -64,7 +64,7 @@ const Drivers = () => {
       comment: comment,
     };
 
-    fetch("http://localhost:5000/drivers", {
+    fetch("https://pendler-server-jirimon39.vercel.app/drivers", {
       method: "POST",
       headers: {
         "content-type": "application/json",

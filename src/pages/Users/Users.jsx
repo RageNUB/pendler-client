@@ -68,7 +68,7 @@ const Users = () => {
     };
     console.log(userinfo);
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://pendler-server-jirimon39.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

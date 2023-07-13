@@ -44,7 +44,7 @@ const JoinUs = () => {
       message: message,
     };
 
-    fetch("http://localhost:5000/queries", {
+    fetch("https://pendler-server-jirimon39.vercel.app/queries", {
       method: "POST",
       headers: {
         "content-type": "application/json",
