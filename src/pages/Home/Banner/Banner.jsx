@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import NavbarHome from "../../../components/NavbarHome.jsx/NavbarHome";
+import banner_web from "../../../assets/banner_web.png"
 import "./Banner.css";
 
 const Banner = () => {
@@ -25,30 +26,34 @@ const Banner = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-end">
-          <div className="mt-14 mr-10">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-14 mt-14 uppercase">
-              Welcome to PENDLER
-            </h1>
-            <p className="text-3xl font-medium mb-14 mt-4">
-              <span>Discover How Pendler Is Revolutionizing</span> <br />
-              <span>The Commuting Sector</span>
-            </p>
-            <div className="flex gap-5 justify-center">
-              <Link to="/drivers">
-                <button className="btn btn-primary rounded-3xl mb-10 px-8">
-                  Sign Up As Driver
-                </button>
-              </Link>
-              <Link to="/users">
-                <button className="btn btn-primary rounded-3xl mb-10 px-8">
-                  Sign Up as User
-                </button>
-              </Link>
+        <div className="flex flex-col-reverse lg:flex-row gap-8 justify-center items-center h-full -mt-12 lg:px-10">
+          <div className="">
+            <img className="w-full lg:h-[30rem]" src={banner_web} alt="" />
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <div className="">
+              <h1 className="text-5xl lg:text-6xl font-bold uppercase mb-14 mt-8 lg:mt-0">
+                Welcome to PENDLER
+              </h1>
+              <p className="text-2xl lg:text-3xl font-medium mb-10">
+                <span>Discover How Pendler Is Revolutionizing</span> <br />
+                <span>The Commuting Sector</span>
+              </p>
+              <div className="flex gap-5 justify-center">
+                <Link to="/drivers">
+                  <button className="btn btn-primary rounded-3xl px-8">
+                    Sign Up As Driver
+                  </button>
+                </Link>
+                <Link to="/users">
+                  <button className="btn btn-primary rounded-3xl px-8">
+                    Sign Up as User
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        {/* <p className="text-7xl text-error"><FaArrowDown></FaArrowDown></p> */}
       </div>
       <NavbarHome></NavbarHome>
     </div>

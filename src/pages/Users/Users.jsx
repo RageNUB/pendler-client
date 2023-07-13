@@ -66,7 +66,7 @@ const Users = () => {
       city: city,
       comment: comment,
     };
-    console.log(userinfo)
+    console.log(userinfo);
 
     fetch("http://localhost:5000/users", {
       method: "POST",
@@ -82,7 +82,7 @@ const Users = () => {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Early Bird Registration Successful",
+            title: "User Early Bird Registration Successful",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -110,7 +110,10 @@ const Users = () => {
             </div>
             <div>
               {
-                <form onSubmit={handleFormSubmit} className="max-w-xl mx-auto px-5">
+                <form
+                  onSubmit={handleFormSubmit}
+                  className="max-w-xl mx-auto px-5"
+                >
                   <div className=" mt-2 mb-3 space-y-2">
                     <p className="text-lg font-medium text-primary text-center">
                       Personal Info

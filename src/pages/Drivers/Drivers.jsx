@@ -50,6 +50,7 @@ const Drivers = () => {
     const email = form.email.value;
     const phone = form.phone.value;
     const model = form.model.value;
+    const carType = form.type.value;
     const plateNumber = form.plateNumber.value;
     const comment = form.comment.value;
 
@@ -58,8 +59,9 @@ const Drivers = () => {
       email: email,
       phone: phone,
       carModel: model,
+      carType: carType,
       plateNumber: plateNumber,
-      comment: comment
+      comment: comment,
     };
 
     fetch("http://localhost:5000/drivers", {
@@ -71,12 +73,12 @@ const Drivers = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Early Bird Registration Successful",
+            title: "Driver Early Bird Registration Successful",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -170,16 +172,38 @@ const Drivers = () => {
                         Car Model
                       </p>
                     </label>
-                    <select className="select select-bordered select-primary w-full" name="model">
-                      <option>
-                        Pick Your Car Model
-                      </option>
+                    <input
+                      type="text"
+                      name="model"
+                      placeholder="Car Model"
+                      className="input input-bordered input-primary w-full"
+                    />
+                  </div>
+                  <div>
+                    <label>
+                      <p className="text-md font-semibold text-white">
+                        Pick Your Car Type
+                      </p>
+                    </label>
+                    <select
+                      className="select select-bordered select-primary w-full"
+                      name="type"
+                    >
+                      <option>Pick Your Car Type</option>
                       <option value="Mini (3 Seater)">Mini ( 3 Seater)</option>
-                      <option value="Hatch Back (4 Seater)">Hatch Back (4 Seater)</option>
-                      <option value="Sedan (4+ Seater)">Sedan (4+ Seater)</option>
-                      <option value="Mini SUV (5 Seater)">Mini SUV (5 Seater)</option>
+                      <option value="Hatch Back (4 Seater)">
+                        Hatch Back (4 Seater)
+                      </option>
+                      <option value="Sedan (4+ Seater)">
+                        Sedan (4+ Seater)
+                      </option>
+                      <option value="Mini SUV (5 Seater)">
+                        Mini SUV (5 Seater)
+                      </option>
                       <option value="SUV (7 Seater)">SUV (7 Seater)</option>
-                      <option value="SUV Plus (8 Seater)">SUV Plus (8 Seater)</option>
+                      <option value="SUV Plus (8 Seater)">
+                        SUV Plus (8 Seater)
+                      </option>
                     </select>
                   </div>
                   <div>

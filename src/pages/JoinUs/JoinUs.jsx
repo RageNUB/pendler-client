@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar";
 import illustration2 from "../../assets/undraw_personal_opinions_re_qw29.svg";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import LazyLoad from "react-lazy-load";
 import Swal from "sweetalert2";
 
@@ -8,29 +8,25 @@ const JoinUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [value,setvalue]=useState("");
-  const [value1,setvalue1]=useState("");
+  const [value, setvalue] = useState("");
+  const [value1, setvalue1] = useState("");
 
-  const [error,setError]=useState("");
-  const [num,setnum]=useState("");
+  const [error, setError] = useState("");
+  const [num, setnum] = useState("");
 
   const onChange1 = (e) => {
     const re = /^[A-Za-z]+$/;
-    if (e.target.value === "" || re.test(e.target.value)){
-      setvalue( e.target.value );
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue(e.target.value);
       setError("");
-    }
-      else
-      setError("Only Characters allowed");
+    } else setError("Only Characters allowed");
   };
   const onChange2 = (e) => {
     const re = /^[0-9]+$/;
-    if (e.target.value === "" || re.test(e.target.value)){
-      setvalue1( e.target.value );
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue1(e.target.value);
       setnum("");
-    }
-      else
-      setnum("Only numbers allowed");
+    } else setnum("Only numbers allowed");
   };
 
   const handleFormSubmit = (event) => {
@@ -45,7 +41,7 @@ const JoinUs = () => {
       fullName: name,
       email: email,
       phone: phone,
-      message: message
+      message: message,
     };
 
     fetch("http://localhost:5000/queries", {
@@ -57,12 +53,12 @@ const JoinUs = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Thank you for connect with us",
+            title: "Thank you for connecting with us",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -79,8 +75,9 @@ const JoinUs = () => {
         <p className="text-lg">
           We are a tight-knit team of innovators on a mission to radically
           transform the ride-sharing sector. For any discussions or business
-          proposals,you can drop us a mail to pendlerofficial1@gmail.com. Any queries / feedback, feel
-          free to reach out to us through this form. We would love to hear from you.
+          proposals,you can drop us a mail to pendlerofficial1@gmail.com. Any
+          queries / feedback, feel free to reach out to us through this form. We
+          would love to hear from you.
         </p>
       </div>
       <div className="mt-14 bg-slate-900 h-screen grid justify-center items-center">
@@ -146,13 +143,12 @@ const JoinUs = () => {
                     </p>
                   </label>
                   <textarea
-                  name="message"
+                    name="message"
                     className="textarea textarea-secondary textarea-lg w-full max-w-lg"
                     placeholder="Your Message"
-      
                   ></textarea>
                 </div>
-          
+
                 <label>
                   <input
                     className="btn btn-primary text-white btn-block mt-4"
@@ -165,7 +161,7 @@ const JoinUs = () => {
           </div>
           <div>
             <LazyLoad>
-            <img src={illustration2} alt="" />
+              <img src={illustration2} alt="" />
             </LazyLoad>
           </div>
         </div>
