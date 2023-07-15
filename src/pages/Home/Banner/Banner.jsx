@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import NavbarHome from "../../../components/NavbarHome.jsx/NavbarHome";
-import banner_web from "../../../assets/banner_web.png"
+import banner_web from "../../../assets/WhatsApp_Image_2023-07-15_at_6.58.42_PM-removebg-preview.png";
 import "./Banner.css";
 
 const Banner = () => {
@@ -36,8 +36,9 @@ const Banner = () => {
                 Welcome to PENDLER
               </h1>
               <p className="text-2xl lg:text-3xl font-medium mb-10">
-                <span>Discover How Pendler Is Revolutionizing</span> <br />
-                <span>The Commuting Sector</span>
+                <span className="bg-primary rounded-lg text-white px-3 py-1">
+                A (0% Commission) Ride-Hailing Experience
+                </span>
               </p>
               <div className="flex gap-5 justify-center">
                 <Link to="/drivers">

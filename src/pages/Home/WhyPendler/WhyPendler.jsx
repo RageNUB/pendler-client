@@ -16,8 +16,8 @@ const WhyPendler = () => {
           <AttentionSeeker effect="pulse">
             <p className="text-2xl break-words mb-5 text-[#666d7c] font-normal">
               Spread the word and earn rewards! With Pendler&apos;s unique
-              referral model, you and your friends can enjoy exclusive benefits
-              while growing our community together.
+              referral model, you and your friends can enjoy (Exclusive Benefits
+              for a Lifetime), while growing our community together.
             </p>
           </AttentionSeeker>
         </div>

@@ -8,6 +8,7 @@ import Drivers from "../pages/Drivers/Drivers";
 import Users from "../pages/Users/Users";
 import Articles from "../pages/Articles/Articles";
 import JoinUs from "../pages/JoinUs/JoinUs";
+import Operator from "../pages/Operator/Operator";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "about-us",
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: "operator",
+                element: <Operator></Operator>
             },
             {
                 path: "drivers",

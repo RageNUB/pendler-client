@@ -44,7 +44,7 @@ const JoinUs = () => {
       message: message,
     };
 
-    fetch("https://pendler-server-jirimon39.vercel.app/queries", {
+    fetch("http://localhost:5000/queries", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -58,7 +58,7 @@ const JoinUs = () => {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Thank you for connecting with us",
+            title: "Thank you for connecting with us and choosing Pendler! We look forward to revolutionizing the ride-sharing experience together",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -104,6 +104,7 @@ const JoinUs = () => {
                     name="name"
                     placeholder="Your Name"
                     className="input input-bordered input-primary w-full"
+                    required
                   />
                 </div>
                 <p className="text-warning">{error}</p>
@@ -118,6 +119,7 @@ const JoinUs = () => {
                     name="email"
                     placeholder="Your Email"
                     className="input input-bordered input-primary w-full"
+                    required
                   />
                 </div>
                 <div>
@@ -133,6 +135,7 @@ const JoinUs = () => {
                     onChange={onChange2}
                     placeholder="Phone Number"
                     className="input input-bordered input-primary w-full"
+                    required
                   />
                 </div>
                 <p className="text-warning">{num}</p>
@@ -146,6 +149,7 @@ const JoinUs = () => {
                     name="message"
                     className="textarea textarea-secondary textarea-lg w-full max-w-lg"
                     placeholder="Your Message"
+                    required
                   ></textarea>
                 </div>
 

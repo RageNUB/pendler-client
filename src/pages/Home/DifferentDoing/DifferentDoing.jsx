@@ -1,5 +1,5 @@
 import LazyLoad from "react-lazy-load";
-import illustration from "../../../assets/undraw_order_ride_re_372k.svg";
+import illustration from "../../../assets/WhatsApp_Image_2023-07-15_at_7.36.14_PM-removebg-preview.png";
 import { Slide, AttentionSeeker } from "react-awesome-reveal";
 
 const DifferentDoing = () => {

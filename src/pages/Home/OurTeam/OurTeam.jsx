@@ -54,7 +54,7 @@ const OurTeam = ({ title }) => {
                 />
               </LazyLoad>
               <h2 className="text-xl font-bold mt-3">Krishna Vaibhav</h2>
-              <p>Co-Founder</p>
+              <p>Managing Director & Co-Founder</p>
             </div>
           </Fade>
         </div>
@@ -69,7 +69,7 @@ const OurTeam = ({ title }) => {
                 />
               </LazyLoad>
               <h2 className="text-xl font-bold mt-3">Sampath Raghavan</h2>
-              <p>Co-Founder</p>
+              <p>General Manager & Co-Founder</p>
             </div>
           </Fade>
           <Fade direction="right">

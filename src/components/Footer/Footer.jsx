@@ -28,7 +28,7 @@ const Footer = () => {
               Baroda, <br />
               Shivam Road, New Nallakunta, <br /> Hyderabad, India
             </p>
-            <a className="link link-hover text-xl font-medium">
+            <a href="mailto:pendlerofficial1@gmail.com" className="link link-hover text-xl font-medium">
               Email:{" "}
               <span className="font-medium">pendlerofficial1@gmail.com</span>
             </a>

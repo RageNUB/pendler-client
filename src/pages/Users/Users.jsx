@@ -68,7 +68,7 @@ const Users = () => {
     };
     console.log(userinfo);
 
-    fetch("https://pendler-server-jirimon39.vercel.app/users", {
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -80,12 +80,9 @@ const Users = () => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "User Early Bird Registration Successful",
-            showConfirmButton: false,
-            timer: 1500,
-          });
+            title: 'User Registration Successful',
+            text: 'Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.',
+          })
         }
       })
       .catch((error) => console.log(error));
@@ -131,6 +128,7 @@ const Users = () => {
                         className="input input-bordered input-primary w-full"
                         onChange={onChange1}
                         value={value}
+                        required
                       />
                     </div>
                     <p className="text-warning">{error}</p>
@@ -145,6 +143,7 @@ const Users = () => {
                         name="email"
                         placeholder="Email"
                         className="input input-bordered input-primary w-full"
+                        required
                       />
                     </div>
                     <div>
@@ -159,6 +158,7 @@ const Users = () => {
                         placeholder="Phone Number"
                         className="input input-bordered input-primary w-full"
                         onChange={onChange2}
+                        required
                       />
                     </div>
                     <p className="text-warning">{num}</p>
@@ -173,6 +173,7 @@ const Users = () => {
                         className="input input-bordered input-primary w-full"
                         value={value2}
                         onChange={onChange3}
+                        required
                       />
                     </div>
                     <p className="text-warning">{cit}</p>

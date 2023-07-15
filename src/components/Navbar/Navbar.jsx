@@ -69,6 +69,18 @@ const Navbar = () => {
                       ? "border-b-4 border-primary"
                       : "hover:border-b-4 border-primary"
                   }
+                  to="/operator"
+                >
+                  Operators
+                </NavLink>
+              </li>
+              <li className="">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border-b-4 border-primary"
+                      : "hover:border-b-4 border-primary"
+                  }
                   to="/drivers"
                 >
                   Drivers
@@ -148,6 +160,18 @@ const Navbar = () => {
                 to="/our-story"
               >
                 Our Story
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-b-4 border-primary pb-1"
+                    : "hover:border-b-4 border-primary pb-1"
+                }
+                to="/operator"
+              >
+                Operators
               </NavLink>
             </li>
             <li className="">

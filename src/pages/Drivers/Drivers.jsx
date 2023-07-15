@@ -64,7 +64,7 @@ const Drivers = () => {
       comment: comment,
     };
 
-    fetch("https://pendler-server-jirimon39.vercel.app/drivers", {
+    fetch("http://localhost:5000/drivers", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -76,12 +76,9 @@ const Drivers = () => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Driver Early Bird Registration Successful",
-            showConfirmButton: false,
-            timer: 1500,
-          });
+            title: 'Driver Registration Successful',
+            text: 'Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.',
+          })
         }
       })
       .catch((error) => console.log(error));
@@ -133,6 +130,7 @@ const Drivers = () => {
                       className="input input-bordered input-primary w-full"
                       value={value}
                       onChange={onChange1}
+                      required
                     />
                   </div>
                   <p className="text-warning">{error}</p>
@@ -144,7 +142,7 @@ const Drivers = () => {
                       type="email"
                       name="email"
                       placeholder="Email"
-                      className="input input-bordered input-primary w-full"
+                      className="input input-bordered input-primary w-full"required
                     />
                   </div>
                   <div>
@@ -160,6 +158,7 @@ const Drivers = () => {
                       name="phone"
                       placeholder="Phone Number"
                       className="input input-bordered input-primary w-full"
+                      required
                     />
                   </div>
                   <p className="text-warning">{num}</p>
@@ -177,6 +176,7 @@ const Drivers = () => {
                       name="model"
                       placeholder="Car Model"
                       className="input input-bordered input-primary w-full"
+                      required
                     />
                   </div>
                   <div>
@@ -188,8 +188,9 @@ const Drivers = () => {
                     <select
                       className="select select-bordered select-primary w-full"
                       name="type"
+                      required={true}
                     >
-                      <option>Pick Your Car Type</option>
+                      {/* <option disabled>Pick Your Car Type</option> */}
                       <option value="Mini (3 Seater)">Mini ( 3 Seater)</option>
                       <option value="Hatch Back (4 Seater)">
                         Hatch Back (4 Seater)
@@ -219,6 +220,7 @@ const Drivers = () => {
                       value={value2}
                       onChange={onChange4}
                       className="input input-bordered input-primary w-full"
+                      required
                     />
                   </div>
                   <p className="text-warning">{plat}</p>
