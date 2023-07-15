@@ -44,7 +44,7 @@ const JoinUs = () => {
       message: message,
     };
 
-    fetch("http://localhost:5000/queries", {
+    fetch("https://pendler-server-jirimon39.vercel.app/queries", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -58,7 +58,8 @@ const JoinUs = () => {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Thank you for connecting with us and choosing Pendler! We look forward to revolutionizing the ride-sharing experience together",
+            title:
+              "Thank you for connecting with us and choosing Pendler! We look forward to revolutionizing the ride-sharing experience together",
             showConfirmButton: false,
             timer: 1500,
           });

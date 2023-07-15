@@ -68,7 +68,7 @@ const Users = () => {
     };
     console.log(userinfo);
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://pendler-server-jirimon39.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -80,9 +80,9 @@ const Users = () => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            title: 'User Registration Successful',
-            text: 'Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.',
-          })
+            title: "User Registration Successful",
+            text: "Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.",
+          });
         }
       })
       .catch((error) => console.log(error));
@@ -96,9 +96,16 @@ const Users = () => {
       <Navbar></Navbar>
       <div>
         <div className="bg-slate-900">
-          <h1 className="text-4xl font-bold text-center pt-2 text-white">
-            Sign Up As User (Early Access)
-          </h1>
+          <div className="max-w-6xl w-full mx-auto text-center">
+            <h1 className="text-4xl font-bold text-center pt-2 text-white mb-6">
+              Sign Up As User (Early Access)
+            </h1>
+            <p className="text-lg text-white">
+              Be among the first to enjoy the benefits of our innovative
+              ride-sharing platform. Sign up for updates <br /> and be part of
+              the Pendler community as we transform the way you commute.
+            </p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
             <div>
               <LazyLoad>

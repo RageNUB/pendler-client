@@ -70,7 +70,7 @@ const Operator = () => {
   };
 
   const handlePostData = (info) => {
-    fetch("http://localhost:5000/operators", {
+    fetch("https://pendler-server-jirimon39.vercel.app/operators", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -104,8 +104,8 @@ const Operator = () => {
     if (vehicleRef.current.value === "bike") {
       const bikes = form.bike.value;
       const operatorInfoBike = {
-        full_name: name,
-        company_name: company,
+        fullName: name,
+        companyName: company,
         email: email,
         phone: phone,
         office: office,
@@ -117,8 +117,8 @@ const Operator = () => {
     } else if (vehicleRef.current.value === "auto") {
       const autos = form.auto.value;
       const operatorInfoAuto = {
-        full_name: name,
-        company_name: company,
+        fullName: name,
+        companyName: company,
         email: email,
         phone: phone,
         office: office,
@@ -129,8 +129,8 @@ const Operator = () => {
       handlePostData(operatorInfoAuto);
     } else if (vehicleRef.current.value === "car") {
       const operatorInfoCar = {
-        full_name: name,
-        company_name: company,
+        fullName: name,
+        companyName: company,
         email: email,
         phone: phone,
         office: office,

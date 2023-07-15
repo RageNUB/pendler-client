@@ -66,7 +66,7 @@ const Drivers = () => {
   };
 
   const handlePostData = (info) => {
-    fetch("http://localhost:5000/drivers", {
+    fetch("https://pendler-server-jirimon39.vercel.app/drivers", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -99,7 +99,7 @@ const Drivers = () => {
       const model = form.model.value;
       const plateNumber = form.plateNumber.value;
       const operatorInfoBike = {
-        full_name: name,
+        fullName: name,
         email: email,
         phone: phone,
         vehicle: vehicle,
@@ -111,7 +111,7 @@ const Drivers = () => {
     } else if (vehicleRef.current.value === "auto") {
       const plateNumber = form.plateNumber.value;
       const operatorInfoAuto = {
-        full_name: name,
+        fullName: name,
         email: email,
         phone: phone,
         vehicle: vehicle,
@@ -124,7 +124,7 @@ const Drivers = () => {
       const model = form.model.value;
       const plateNumber = form.plateNumber.value;
       const operatorInfoCar = {
-        full_name: name,
+        fullName: name,
         email: email,
         phone: phone,
         vehicle: vehicle,
@@ -151,7 +151,7 @@ const Drivers = () => {
             </h1>
             <p className="text-lg text-white">
               Be among the first to enjoy the benefits of our innovative
-              ride-sharing platform. Sign up for <br /> updates and be part of
+              ride-sharing platform. Sign up for updates <br /> and be part of
               the Pendler community as we transform the way you commute.
             </p>
           </div>
