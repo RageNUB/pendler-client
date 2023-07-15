@@ -20,14 +20,6 @@ const Operator = () => {
     { type: handleModel(), model: "", cars: "" },
   ]);
 
-  const handleCarCount = (event) => {
-    event.preventDefault();
-    const remainingCar = [...carCount];
-    remainingCar.push(1);
-    setCarCount(remainingCar);
-    console.log(carCount);
-  };
-
   const vehicleRef = useRef(null);
   const handleVehicle = () => {
     if (vehicleRef.current.value === "bike") {
@@ -415,72 +407,7 @@ const Operator = () => {
                     </div>
                   ))}
                 </div>
-                {/* {car && (
-                  <div>
-                    <div>
-                      <label>
-                        <p className="text-md font-semibold text-white">
-                          Pick Your Car Type
-                        </p>
-                      </label>
-                      <select
-                        className="select select-bordered select-primary w-full"
-                        name="type"
-                        required={true}
-                      >
-                        <option value="Mini (3 Seater)">
-                          Mini ( 3 Seater)
-                        </option>
-                        <option value="Hatch Back (4 Seater)">
-                          Hatch Back (4 Seater)
-                        </option>
-                        <option value="Sedan (4+ Seater)">
-                          Sedan (4+ Seater)
-                        </option>
-                        <option value="Mini SUV (5 Seater)">
-                          Mini SUV (5 Seater)
-                        </option>
-                        <option value="SUV (7 Seater)">SUV (7 Seater)</option>
-                        <option value="SUV Plus (8 Seater)">
-                          SUV Plus (8 Seater)
-                        </option>
-                      </select>
-                    </div>
-                    <div>
-                      <label>
-                        <p className="text-md font-semibold text-white">
-                          Model Name
-                        </p>
-                      </label>
-                      <input
-                        type="text"
-                        value={value1}
-                        onChange={onChange2}
-                        name="model"
-                        placeholder="Model Name"
-                        className="input input-bordered input-primary w-full"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label>
-                        <p className="text-md font-semibold text-white">
-                          Number of Cars
-                        </p>
-                      </label>
-                      <input
-                        type="text"
-                        value={value1}
-                        onChange={onChange2}
-                        name="car"
-                        placeholder="Number of Cars"
-                        className="input input-bordered input-primary w-full"
-                        required
-                      />
-                      <p className="text-warning">{num}</p>
-                    </div>
-                  </div>
-                )} */}
+
                 {car && (
                   <div onClick={addField} className="flex justify-end">
                     <button className="btn btn-xs btn-primary">
@@ -489,47 +416,6 @@ const Operator = () => {
                   </div>
                 )}
 
-                {/* <div>
-                  <label>
-                    <p className="text-md font-semibold text-white">
-                      Pick Your Car Type
-                    </p>
-                  </label>
-                  <select
-                    className="select select-bordered select-primary w-full"
-                    name="type"
-                    required={true}
-                  >
-                    <option value="Mini (3 Seater)">Mini ( 3 Seater)</option>
-                    <option value="Hatch Back (4 Seater)">
-                      Hatch Back (4 Seater)
-                    </option>
-                    <option value="Sedan (4+ Seater)">Sedan (4+ Seater)</option>
-                    <option value="Mini SUV (5 Seater)">
-                      Mini SUV (5 Seater)
-                    </option>
-                    <option value="SUV (7 Seater)">SUV (7 Seater)</option>
-                    <option value="SUV Plus (8 Seater)">
-                      SUV Plus (8 Seater)
-                    </option>
-                  </select>
-                </div> */}
-                {/* <div>
-                  <label>
-                    <p className="text-md font-semibold text-white">
-                      Plate Number
-                    </p>
-                  </label>
-                  <input
-                    type="text"
-                    name="plateNumber"
-                    placeholder="Plate Number"
-                    value={value2}
-                    onChange={onChange4}
-                    className="input input-bordered input-primary w-full"
-                    required
-                  />
-                </div> */}
                 <p className="text-warning">{plat}</p>
                 <div>
                   <label>

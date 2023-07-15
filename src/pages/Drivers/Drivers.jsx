@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import illustration from "../../assets/Taxi Driver_Isometric.svg";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { Helmet } from "react-helmet-async";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LazyLoad from "react-lazy-load";
 import "./Drivers.css";
 import Swal from "sweetalert2";
@@ -11,6 +11,11 @@ const Drivers = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [bike, setBike] = useState(true);
+  const [car, setCar] = useState(false);
+  const [auto, setAuto] = useState(false);
+
   const [value, setvalue] = useState("");
   const [value1, setvalue1] = useState("");
   const [value2, setvalue2] = useState("");
@@ -43,45 +48,93 @@ const Drivers = () => {
     } else setplate("Only characters and numbers allowed");
   };
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const phone = form.phone.value;
-    const model = form.model.value;
-    const carType = form.type.value;
-    const plateNumber = form.plateNumber.value;
-    const comment = form.comment.value;
+  const vehicleRef = useRef(null);
+  const handleVehicle = () => {
+    if (vehicleRef.current.value === "bike") {
+      setBike(true);
+      setCar(false);
+      setAuto(false);
+    } else if (vehicleRef.current.value === "car") {
+      setBike(false);
+      setCar(true);
+      setAuto(false);
+    } else if (vehicleRef.current.value === "auto") {
+      setBike(false);
+      setCar(false);
+      setAuto(true);
+    }
+  };
 
-    const driverinfo = {
-      fullName: name,
-      email: email,
-      phone: phone,
-      carModel: model,
-      carType: carType,
-      plateNumber: plateNumber,
-      comment: comment,
-    };
-
+  const handlePostData = (info) => {
     fetch("http://localhost:5000/drivers", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(driverinfo),
+      body: JSON.stringify(info),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            title: 'Driver Registration Successful',
-            text: 'Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.',
-          })
+            title: "Driver Registration Successful",
+            text: "Our team will review your application and get in touch with you soon. Thank you for choosing Pendler! We look forward to revolutionizing the ride-sharing experience together.",
+          });
         }
       })
       .catch((error) => console.log(error));
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const vehicle = form.vehicle.value;
+    const comment = form.comment.value;
+
+    if (vehicleRef.current.value === "bike") {
+      const model = form.model.value;
+      const plateNumber = form.plateNumber.value;
+      const operatorInfoBike = {
+        full_name: name,
+        email: email,
+        phone: phone,
+        vehicle: vehicle,
+        model: model,
+        plateNumber: plateNumber,
+        remarks: comment,
+      };
+      handlePostData(operatorInfoBike);
+    } else if (vehicleRef.current.value === "auto") {
+      const plateNumber = form.plateNumber.value;
+      const operatorInfoAuto = {
+        full_name: name,
+        email: email,
+        phone: phone,
+        vehicle: vehicle,
+        plateNumber: plateNumber,
+        remarks: comment,
+      };
+      handlePostData(operatorInfoAuto);
+    } else if (vehicleRef.current.value === "car") {
+      const type = form.type.value;
+      const model = form.model.value;
+      const plateNumber = form.plateNumber.value;
+      const operatorInfoCar = {
+        full_name: name,
+        email: email,
+        phone: phone,
+        vehicle: vehicle,
+        type: type,
+        model: model,
+        plateNumber: plateNumber,
+        remarks: comment,
+      };
+      handlePostData(operatorInfoCar);
+    }
   };
 
   return (
@@ -142,7 +195,8 @@ const Drivers = () => {
                       type="email"
                       name="email"
                       placeholder="Email"
-                      className="input input-bordered input-primary w-full"required
+                      className="input input-bordered input-primary w-full"
+                      required
                     />
                   </div>
                   <div>
@@ -165,64 +219,151 @@ const Drivers = () => {
                   <p className="text-lg font-medium text-primary text-center mt-3">
                     Vehicle Details
                   </p>
+
                   <div>
                     <label>
                       <p className="text-md font-semibold text-white">
-                        Car Model
-                      </p>
-                    </label>
-                    <input
-                      type="text"
-                      name="model"
-                      placeholder="Car Model"
-                      className="input input-bordered input-primary w-full"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label>
-                      <p className="text-md font-semibold text-white">
-                        Pick Your Car Type
+                        Pick Your Vehicle Type
                       </p>
                     </label>
                     <select
+                      onClick={handleVehicle}
+                      ref={vehicleRef}
                       className="select select-bordered select-primary w-full"
-                      name="type"
+                      name="vehicle"
                       required={true}
                     >
-                      {/* <option disabled>Pick Your Car Type</option> */}
-                      <option value="Mini (3 Seater)">Mini ( 3 Seater)</option>
-                      <option value="Hatch Back (4 Seater)">
-                        Hatch Back (4 Seater)
-                      </option>
-                      <option value="Sedan (4+ Seater)">
-                        Sedan (4+ Seater)
-                      </option>
-                      <option value="Mini SUV (5 Seater)">
-                        Mini SUV (5 Seater)
-                      </option>
-                      <option value="SUV (7 Seater)">SUV (7 Seater)</option>
-                      <option value="SUV Plus (8 Seater)">
-                        SUV Plus (8 Seater)
-                      </option>
+                      <option value="bike">Bike</option>
+                      <option value="car">Car</option>
+                      <option value="auto">Auto</option>
                     </select>
                   </div>
+
+                  {bike && (
+                    <div>
+                      <div>
+                        <label>
+                          <p className="text-md font-semibold text-white">
+                            Model Name
+                          </p>
+                        </label>
+                        <input
+                          type="text"
+                          //   value={value1}
+                          //   onChange={onChange2}
+                          name="model"
+                          placeholder="Model Name"
+                          className="input input-bordered input-primary w-full"
+                          required
+                        />
+                        <p className="text-warning">{num}</p>
+                      </div>
+                      <div>
+                        <label>
+                          <p className="text-md font-semibold text-white">
+                            Plate Number
+                          </p>
+                        </label>
+                        <input
+                          type="text"
+                          name="plateNumber"
+                          placeholder="Plate Number"
+                          value={value2}
+                          onChange={onChange4}
+                          className="input input-bordered input-primary w-full"
+                          required
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {auto && (
+                    <div>
+                      <label>
+                        <p className="text-md font-semibold text-white">
+                          Plate Number
+                        </p>
+                      </label>
+                      <input
+                        type="text"
+                        name="plateNumber"
+                        placeholder="Plate Number"
+                        value={value2}
+                        onChange={onChange4}
+                        className="input input-bordered input-primary w-full"
+                        required
+                      />
+                    </div>
+                  )}
+
                   <div>
-                    <label>
-                      <p className="text-md font-semibold text-white">
-                        Plate Number
-                      </p>
-                    </label>
-                    <input
-                      type="text"
-                      name="plateNumber"
-                      placeholder="Plate Number"
-                      value={value2}
-                      onChange={onChange4}
-                      className="input input-bordered input-primary w-full"
-                      required
-                    />
+                    <div>
+                      {car && (
+                        <div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Pick Your Car Type
+                              </p>
+                            </label>
+                            <select
+                              className="select select-bordered select-primary w-full"
+                              name="type"
+                            >
+                              <option value="Mini (3 Seater)">
+                                Mini ( 3 Seater)
+                              </option>
+                              <option value="Hatch Back (4 Seater)">
+                                Hatch Back (4 Seater)
+                              </option>
+                              <option value="Sedan (4+ Seater)">
+                                Sedan (4+ Seater)
+                              </option>
+                              <option value="Mini SUV (5 Seater)">
+                                Mini SUV (5 Seater)
+                              </option>
+                              <option value="SUV (7 Seater)">
+                                SUV (7 Seater)
+                              </option>
+                              <option value="SUV Plus (8 Seater)">
+                                SUV Plus (8 Seater)
+                              </option>
+                            </select>
+                          </div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Model Name
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              name="model"
+                              placeholder="Model Name"
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Plate Number
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              name="plateNumber"
+                              placeholder="Plate Number"
+                              value={value2}
+                              onChange={onChange4}
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
+
                   <p className="text-warning">{plat}</p>
                   <div>
                     <label>

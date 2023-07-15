@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import NavbarHome from "../../../components/NavbarHome.jsx/NavbarHome";
-import banner_web from "../../../assets/WhatsApp_Image_2023-07-15_at_6.58.42_PM-removebg-preview.png";
+import banner_web from "../../../assets/9e3a75071998ea09779c31a36f01a4ce.gif";
 import "./Banner.css";
 
 const Banner = () => {
@@ -28,11 +28,11 @@ const Banner = () => {
         </div>
         <div className="flex flex-col-reverse lg:flex-row gap-8 justify-center items-center h-full -mt-12 lg:px-10">
           <div className="">
-            <img className="w-full lg:h-[30rem]" src={banner_web} alt="" />
+            <img className="w-full lg:h-[30rem] rounded-full drop-shadow-lg" src={banner_web} alt="" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div className="">
-              <h1 className="text-5xl lg:text-6xl font-bold uppercase mb-14 mt-8 lg:mt-0">
+              <h1 className="text-5xl lg:text-6xl font-bold uppercase mb-14 mt-8 lg:mt-0 drop-shadow-2xl">
                 Welcome to PENDLER
               </h1>
               <p className="text-2xl lg:text-3xl font-medium mb-10">
