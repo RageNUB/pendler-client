@@ -176,8 +176,7 @@ const FAQs = () => {
                   Pendler is coming soon to Hyderabad so Stay tuned for the
                   official launch, Be among the first to enjoy the benefits of
                   our innovative ride-sharing platform. Sign up for updates and
-                  be part of the Pendler community as we transform the way you
-                  commute.
+                  be part of the Pendler community as we change the way you shuttle.
                 </p>
               </div>
             </div>

@@ -74,19 +74,24 @@ const JoinUs = () => {
       <div className="text-center mt-10 space-y-5 max-w-6xl w-full mx-auto">
         <h1 className="text-4xl font-bold uppercase">Contact Our Firm</h1>
         <p className="text-lg">
-          We are a tight-knit team of innovators on a mission to radically
+          We are a tight-knit team of changemakers on a mission to radically
           transform the ride-sharing sector. For any discussions or business
           proposals,you can drop us a mail to pendlerofficial1@gmail.com. Any
           queries / feedback, feel free to reach out to us through this form. We
           would love to hear from you.
         </p>
       </div>
-      <div className="mt-14 bg-slate-900 h-screen grid justify-center items-center">
+      <div className="mt-14 bg-slate-900 grid justify-center items-center">
         <h1 className="text-4xl font-bold text-center pt-5 text-white">
           Drop Your Queries / Inputs
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
-          <div>
+          <div className="px-2 order-1 lg:order-2">
+            <LazyLoad>
+              <img className="w-[39rem]" src={illustration2} alt="" />
+            </LazyLoad>
+          </div>
+          <div className="order-2 lg:order-1">
             <form onSubmit={handleFormSubmit} className="max-w-xl mx-auto px-5">
               <div className="mt-2 mb-3 space-y-2">
                 <p className="text-lg font-medium text-primary text-center">
@@ -163,11 +168,6 @@ const JoinUs = () => {
                 </label>
               </div>
             </form>
-          </div>
-          <div>
-            <LazyLoad>
-              <img src={illustration2} alt="" />
-            </LazyLoad>
           </div>
         </div>
       </div>

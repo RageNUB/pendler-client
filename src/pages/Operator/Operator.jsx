@@ -2,11 +2,14 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar/Navbar";
 import LazyLoad from "react-lazy-load";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const Operator = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [bike, setBike] = useState(true);
   const [car, setCar] = useState(false);
   const [auto, setAuto] = useState(false);
@@ -61,6 +64,14 @@ const Operator = () => {
     } else setnum("Only numbers allowed");
   };
 
+  const onChange3 = (e) => {
+    const re = /^[0-9]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue1(e.target.value);
+      setnum("");
+    } else setnum("Only numbers allowed");
+  };
+
   const onChange4 = (e) => {
     const re = /^[A-Za-z0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
@@ -96,6 +107,7 @@ const Operator = () => {
     const name = form.name.value;
     const email = form.email.value;
     const company = form.company.value;
+    const companyPhone = form.companyPhone.value;
     const phone = form.phone.value;
     const office = form.office.value;
     const vehicle = form.vehicle.value;
@@ -106,6 +118,7 @@ const Operator = () => {
       const operatorInfoBike = {
         fullName: name,
         companyName: company,
+        companyPhone: companyPhone,
         email: email,
         phone: phone,
         office: office,
@@ -119,6 +132,7 @@ const Operator = () => {
       const operatorInfoAuto = {
         fullName: name,
         companyName: company,
+        companyPhone: companyPhone,
         email: email,
         phone: phone,
         office: office,
@@ -131,6 +145,7 @@ const Operator = () => {
       const operatorInfoCar = {
         fullName: name,
         companyName: company,
+        companyPhone: companyPhone,
         email: email,
         phone: phone,
         office: office,
@@ -216,6 +231,21 @@ const Operator = () => {
                     // onChange={onChange1}
                   />
                 </div>
+                <div>
+                  <label>
+                    <p className="text-md font-semibold text-white">
+                      Company Phone (Optional)
+                    </p>
+                  </label>
+                  <input
+                    type="text"
+                    name="companyPhone"
+                    placeholder="Company Phone"
+                    className="input input-bordered input-primary w-full"
+                    // value={value}
+                    // onChange={onChange1}
+                  />
+                </div>
                 <p className="text-warning">{error}</p>
                 <p className="text-lg font-medium text-primary text-center mt-3">
                   Contact Information
@@ -235,7 +265,7 @@ const Operator = () => {
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
-                      Phone Number
+                     Personal Phone Number
                     </p>
                   </label>
                   <input
@@ -243,7 +273,7 @@ const Operator = () => {
                     value={value1}
                     onChange={onChange2}
                     name="phone"
-                    placeholder="Phone Number"
+                    placeholder="Personal Phone Number"
                     className="input input-bordered input-primary w-full"
                     // required
                   />
@@ -276,7 +306,7 @@ const Operator = () => {
                     </p>
                   </label>
                   <select
-                    onClick={handleVehicle}
+                    onChange={handleVehicle}
                     ref={vehicleRef}
                     className="select select-bordered select-primary w-full"
                     name="vehicle"

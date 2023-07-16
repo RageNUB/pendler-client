@@ -36,11 +36,11 @@ const Scroll = () => {
   };
 
   return (
-    <div className={`${hidden ? "hidden" : ""} avatar placeholder`}>
+    <div className={`${hidden ? "hidden" : ""}`}>
       {bottom && (
         <div
           onClick={scrollToTop}
-          className="bg-primary text-neutral-content rounded-full w-12 fixed bottom-5 right-5"
+          className="bg-primary text-neutral-content rounded-full w-12 h-12 fixed bottom-5 right-5 flex justify-center items-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const Scroll = () => {
       {!bottom && (
         <div
           onClick={scrollToBottom}
-          className="bg-primary text-neutral-content rounded-full w-12 fixed right-5 bottom-5"
+          className="bg-primary text-neutral-content rounded-full w-12 h-12 fixed right-5 bottom-5 flex justify-center items-center"
           // className={`${hidden ? "hidden" : ""} bg-primary text-neutral-content rounded-full w-12 fixed right-5 bottom-5`}
         >
           <svg

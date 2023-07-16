@@ -16,8 +16,8 @@ const AboutPlatform = () => {
           <hr className="h-2.5 w-36 bg-primary mb-12" />
           <AttentionSeeker effect="pulse">
             <p className="text-2xl break-words mb-5 text-[#666d7c] font-normal">
-              Experience Our (0% Commission System), Pendler has the most
-              cost-effective pricing mechanism, which benefits both the rider
+              With Our <span className="font-bold text-primary">0% Commission System</span>, Pendler has the most
+              cost-effective pricing mechanism which benefits both the rider
               and the driver.
             </p>
           </AttentionSeeker>

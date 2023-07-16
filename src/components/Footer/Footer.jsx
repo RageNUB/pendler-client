@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logoText.png";
 
-const Footer = () => {
+const Footer = ({color}) => {
   return (
-    <div className="border-t-2 border-slate-900">
+    <div className="border-t-2 border-slate-900 w-full">
       <div className="max-w-6xl mx-auto">
-        <footer className="footer p-10 bg-base-100  text-base-content">
+        <footer className={`footer p-10`}>
           <div>
             <img className="w-36 -my-12" src={logo} alt="" />
             <p>
@@ -89,9 +89,9 @@ const Footer = () => {
         </footer>
       </div>
 
-      <div className="footer footer-center p-4 bg-slate-900 border-t-2 border-gray-50 text-white">
+      <div className={`${color ? "bg-base-100 text-slate-900 font-bold" : "bg-slate-900 text-white font-semibold"} footer footer-center p-4`}>
         <div>
-          <p className="text-base font-semibold">
+          <p className="text-lg">
             Copyright © 2023 : All Rights Reserved by PENDLER
           </p>
         </div>

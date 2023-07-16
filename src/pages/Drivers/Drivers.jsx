@@ -227,7 +227,7 @@ const Drivers = () => {
                       </p>
                     </label>
                     <select
-                      onClick={handleVehicle}
+                      onChange={handleVehicle}
                       ref={vehicleRef}
                       className="select select-bordered select-primary w-full"
                       name="vehicle"
@@ -419,7 +419,7 @@ const Drivers = () => {
         <h3 className="text-4xl font-bold text-center mb-8">
           Unlocking Opportunities for Drivers{" "}
         </h3>
-        <div className="space-y-4 text-2xl mb-32 text-[#424754]">
+        <div className="space-y-4 text-2xl mb-28 text-[#424754]">
           <p>
             Our platform offers drivers numerous benefits, including higher
             earnings through our <b>NO commission model</b>, with our{" "}
@@ -442,6 +442,7 @@ const Drivers = () => {
             and ownership. Customers pay less, while drivers earn what they
             deserve. Join us and be the master of your ride-sharing success.
           </p>
+          <p className="text-center font-bold text-3xl text-primary pt-14">WORRY LESS : EARN MORE</p>
         </div>
       </div>
     </div>

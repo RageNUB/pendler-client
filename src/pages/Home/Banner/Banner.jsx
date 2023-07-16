@@ -2,8 +2,26 @@ import { Link } from "react-router-dom";
 import NavbarHome from "../../../components/NavbarHome.jsx/NavbarHome";
 import banner_web from "../../../assets/9e3a75071998ea09779c31a36f01a4ce.gif";
 import "./Banner.css";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim";
+import ParticlesBG from "../../../components/ParticlesBG/ParticlesBG";
 
 const Banner = () => {
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    // await loadFull(engine);
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
+
   return (
     <div className="w-full h-screen">
       <div className="text-center banner pt-8 px-2">
@@ -26,19 +44,23 @@ const Banner = () => {
             </p>
           </div>
         </div>
+
         <div className="flex flex-col-reverse lg:flex-row gap-8 justify-center items-center h-full -mt-12 lg:px-10">
           <div className="">
-            <img className="w-full lg:h-[30rem] rounded-full drop-shadow-lg" src={banner_web} alt="" />
+            <img
+              className="w-full lg:h-[30rem] rounded-full shadow-lg shadow-orange-500"
+              src={banner_web}
+              alt=""
+            />
           </div>
           <div className="flex flex-col justify-center items-center">
             <div className="">
               <h1 className="text-5xl lg:text-6xl font-bold uppercase mb-14 mt-8 lg:mt-0 drop-shadow-2xl">
-                Welcome to PENDLER
+                <span className="text-[#001c52]">Welcome to PENDLER</span>
               </h1>
-              <p className="text-2xl lg:text-3xl font-medium mb-10">
-                <span className="bg-primary rounded-lg text-white px-3 py-1">
-                A (0% Commission) Ride-Hailing Experience
-                </span>
+              <p className="text-2xl lg:text-4xl font-medium mb-10 text-[#001c52]">
+                A <span className="font-bold text-primary">0% Commission</span>{" "}
+                Ride-Hailing Experience
               </p>
               <div className="flex gap-5 justify-center">
                 <Link to="/drivers">

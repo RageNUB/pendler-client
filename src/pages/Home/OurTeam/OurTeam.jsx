@@ -11,7 +11,7 @@ const OurTeam = ({ title }) => {
     <div className="mt-12 lg:mt-6 mb-28">
       {title && (
         <h1 className="text-xl lg:text-5xl font-bold mb-3 text-center">
-          <span className="bg-slate-900 text-white px-5 py-2 rounded-3xl">
+          <span className="bg-primary text-white px-5 py-2 rounded-3xl">
             Passionate Minds Driving Innovation
           </span>
         </h1>
@@ -28,7 +28,7 @@ const OurTeam = ({ title }) => {
                 />
               </LazyLoad>
               <h2 className="text-xl font-bold mt-3">Vishnu Vardhan</h2>
-              <p>Co-Founder & CEO</p>
+              <p>Chief Executive Officer & Co-Founder</p>
             </div>
           </Fade>
           <Fade direction="left">
@@ -41,7 +41,7 @@ const OurTeam = ({ title }) => {
                 />
               </LazyLoad>
               <h2 className="text-xl font-bold mt-3">Likhith Ram</h2>
-              <p>Co-Founder & COO</p>
+              <p>Chief Operating Officer & Co-Founder</p>
             </div>
           </Fade>
           <Fade direction="left">
@@ -82,7 +82,7 @@ const OurTeam = ({ title }) => {
                 />
               </LazyLoad>
               <h2 className="text-xl font-bold mt-3">Prathima Kadari</h2>
-              <p>Co-Founder & CTO</p>
+              <p>Chief Technology Officer & Co-Founder</p>
             </div>
           </Fade>
         </div>

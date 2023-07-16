@@ -21,7 +21,7 @@ const DriverBenefits = () => {
           <AttentionSeeker effect="pulse">
             <p className="text-2xl break-words mb-5 text-base-300 font-normal">
               Experience a ride-sharing revolution with Pendler, where drivers
-              and riders both benefit, creating a win-win situation for all.
+              and riders both gain edge, creating a win-win situation for all.
             </p>
           </AttentionSeeker>
           {/* <Link>
