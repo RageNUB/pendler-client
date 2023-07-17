@@ -19,25 +19,35 @@ const Drivers = () => {
   const [value, setvalue] = useState("");
   const [value1, setvalue1] = useState("");
   const [value2, setvalue2] = useState("");
+  const [value3, setvalue3] = useState("");
 
   const [error, setError] = useState("");
+  const [model, setModel] = useState("");
   const [num, setnum] = useState("");
   const [plat, setplate] = useState("");
-  // const [cit,setcit]=useState("");
 
   const onChange1 = (e) => {
-    const re = /^[A-Za-z]+$/;
+    const re = /^[A-Za-z ]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
       setvalue(e.target.value);
       setError("");
     } else setError("Only Characters allowed");
   };
+  
   const onChange2 = (e) => {
     const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
       setvalue1(e.target.value);
       setnum("");
     } else setnum("Only numbers allowed");
+  };
+
+  const onChangeModel = (e) => {
+    const re = /^[A-Za-z0-9 ]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue3(e.target.value);
+      setModel("");
+    } else setModel("Only characters and numbers allowed");
   };
 
   const onChange4 = (e) => {
@@ -249,14 +259,14 @@ const Drivers = () => {
                         </label>
                         <input
                           type="text"
-                          //   value={value1}
-                          //   onChange={onChange2}
+                          value={value3}
+                          onChange={onChangeModel}
                           name="model"
                           placeholder="Model Name"
                           className="input input-bordered input-primary w-full"
                           required
                         />
-                        <p className="text-warning">{num}</p>
+                        <p className="text-warning">{model}</p>
                       </div>
                       <div>
                         <label>
@@ -337,12 +347,15 @@ const Drivers = () => {
                             </label>
                             <input
                               type="text"
+                              value={value3}
+                              onChange={onChangeModel}
                               name="model"
                               placeholder="Model Name"
                               className="input input-bordered input-primary w-full"
                               required
                             />
                           </div>
+                          <p className="text-warning">{model}</p>
                           <div>
                             <label>
                               <p className="text-md font-semibold text-white">
@@ -442,7 +455,9 @@ const Drivers = () => {
             and ownership. Customers pay less, while drivers earn what they
             deserve. Join us and be the master of your ride-sharing success.
           </p>
-          <p className="text-center font-bold text-3xl text-primary pt-14">WORRY LESS : EARN MORE</p>
+          <p className="text-center font-bold text-3xl text-primary pt-14">
+            WORRY LESS : EARN MORE
+          </p>
         </div>
       </div>
     </div>

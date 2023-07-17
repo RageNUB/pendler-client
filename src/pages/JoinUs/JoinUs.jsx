@@ -15,7 +15,7 @@ const JoinUs = () => {
   const [num, setnum] = useState("");
 
   const onChange1 = (e) => {
-    const re = /^[A-Za-z]+$/;
+    const re = /^[A-Za-z ]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
       setvalue(e.target.value);
       setError("");

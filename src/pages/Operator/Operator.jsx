@@ -42,20 +42,35 @@ const Operator = () => {
 
   const [value, setvalue] = useState("");
   const [value1, setvalue1] = useState("");
-  const [value2, setvalue2] = useState("");
+  // const [value2, setvalue2] = useState("");
+  const [value3, setvalue3] = useState("");
+  const [value4, setvalue4] = useState("");
+  const [value5, setvalue5] = useState("");
 
   const [error, setError] = useState("");
+  const [error2, setError2] = useState("");
   const [num, setnum] = useState("");
-  const [plat, setplate] = useState("");
+  const [num2, setnum2] = useState("");
+  const [count, setCount] = useState("");
+  // const [plat, setplate] = useState("");
   // const [cit,setcit]=useState("");
 
   const onChange1 = (e) => {
-    const re = /^[A-Za-z]+$/;
+    const re = /^[A-Za-z ]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
       setvalue(e.target.value);
       setError("");
     } else setError("Only Characters allowed");
   };
+
+  const onChangeCompanyName = (e) => {
+    const re = /^[A-Za-z ]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue4(e.target.value);
+      setError2("");
+    } else setError2("Only Characters allowed");
+  };
+
   const onChange2 = (e) => {
     const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
@@ -64,21 +79,29 @@ const Operator = () => {
     } else setnum("Only numbers allowed");
   };
 
-  const onChange3 = (e) => {
+  const onChangeCount = (e) => {
     const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
-      setvalue1(e.target.value);
-      setnum("");
-    } else setnum("Only numbers allowed");
+      setvalue5(e.target.value);
+      setCount("");
+    } else setCount("Only numbers allowed");
   };
 
-  const onChange4 = (e) => {
-    const re = /^[A-Za-z0-9]+$/;
+  const onChangeCompanyPhone = (e) => {
+    const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
-      setvalue2(e.target.value);
-      setplate("");
-    } else setplate("Only characters and numbers allowed");
+      setvalue3(e.target.value);
+      setnum2("");
+    } else setnum2("Only numbers allowed");
   };
+
+  // const onChangeEmail = (e) => {
+  //   const re = /^[A-Za-z0-9]+$/;
+  //   if (e.target.value === "" || re.test(e.target.value)) {
+  //     setvalue2(e.target.value);
+  //     setplate("");
+  //   } else setplate("Only characters and numbers allowed");
+  // };
 
   const handlePostData = (info) => {
     fetch("https://pendler-server-jirimon39.vercel.app/operators", {
@@ -212,7 +235,7 @@ const Operator = () => {
                     className="input input-bordered input-primary w-full"
                     value={value}
                     onChange={onChange1}
-                    // required
+                    required
                   />
                 </div>
                 <p className="text-warning">{error}</p>
@@ -227,10 +250,11 @@ const Operator = () => {
                     name="company"
                     placeholder="Company Name"
                     className="input input-bordered input-primary w-full"
-                    // value={value}
-                    // onChange={onChange1}
+                    value={value4}
+                    onChange={onChangeCompanyName}
                   />
                 </div>
+                <p className="text-warning">{error2}</p>
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
@@ -242,11 +266,11 @@ const Operator = () => {
                     name="companyPhone"
                     placeholder="Company Phone"
                     className="input input-bordered input-primary w-full"
-                    // value={value}
-                    // onChange={onChange1}
+                    value={value3}
+                    onChange={onChangeCompanyPhone}
                   />
                 </div>
-                <p className="text-warning">{error}</p>
+                <p className="text-warning">{num2}</p>
                 <p className="text-lg font-medium text-primary text-center mt-3">
                   Contact Information
                 </p>
@@ -259,13 +283,13 @@ const Operator = () => {
                     name="email"
                     placeholder="Email"
                     className="input input-bordered input-primary w-full"
-                    // required
+                    required
                   />
                 </div>
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
-                     Personal Phone Number
+                      Personal Phone Number
                     </p>
                   </label>
                   <input
@@ -275,7 +299,7 @@ const Operator = () => {
                     name="phone"
                     placeholder="Personal Phone Number"
                     className="input input-bordered input-primary w-full"
-                    // required
+                    required
                   />
                 </div>
                 <p className="text-warning">{num}</p>
@@ -287,15 +311,12 @@ const Operator = () => {
                   </label>
                   <input
                     type="text"
-                    // value={value1}
-                    // onChange={onChange2}
                     name="office"
                     placeholder="Office Address"
                     className="input input-bordered input-primary w-full"
-                    // required
+                    required
                   />
                 </div>
-                {/* <p className="text-warning">{num}</p> */}
                 <p className="text-lg font-medium text-primary text-center mt-3">
                   Vehicle Details
                 </p>
@@ -328,14 +349,14 @@ const Operator = () => {
                     </label>
                     <input
                       type="text"
-                      //   value={value1}
-                      //   onChange={onChange2}
+                      value={value5}
+                      onChange={onChangeCount}
                       name="bike"
                       placeholder="Number of Bikes"
                       className="input input-bordered input-primary w-full"
                       required
                     />
-                    <p className="text-warning">{num}</p>
+                    <p className="text-warning">{count}</p>
                   </div>
                 )}
                 {auto && (
@@ -347,14 +368,14 @@ const Operator = () => {
                     </label>
                     <input
                       type="text"
-                      //   value={value1}
-                      //   onChange={onChange2}
+                      value={value5}
+                      onChange={onChangeCount}
                       name="auto"
                       placeholder="Number of Autos"
                       className="input input-bordered input-primary w-full"
                       required
                     />
-                    <p className="text-warning">{num}</p>
+                    <p className="text-warning">{count}</p>
                   </div>
                 )}
                 <div>
@@ -420,7 +441,7 @@ const Operator = () => {
                               </p>
                             </label>
                             <input
-                              type="text"
+                              type="number"
                               value={cars.cars}
                               onChange={(event) =>
                                 handleFormChange(index, event)
@@ -430,7 +451,6 @@ const Operator = () => {
                               className="input input-bordered input-primary w-full"
                               required
                             />
-                            <p className="text-warning">{num}</p>
                           </div>
                         </div>
                       )}
@@ -446,7 +466,6 @@ const Operator = () => {
                   </div>
                 )}
 
-                <p className="text-warning">{plat}</p>
                 <div>
                   <label>
                     <p className="text-md font-semibold text-white">
