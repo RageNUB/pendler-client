@@ -20,8 +20,8 @@ const DifferentDoing = () => {
           <hr className="h-2.5 w-36 bg-primary mb-12" />
           <AttentionSeeker effect="pulse">
             <p className="text-2xl break-words mb-5 text-base-300 font-normal">
-              Welcome to Pendler - your go-to ride-sharing platform for seamless
-              travel. Explore user-centric features and see why Pendler is your
+              Welcome to Pendler - Your Go To Ride-Sharing Platform for <span className="text-primary font-bold">seamless
+              travel</span>. Explore user-centric features and see why Pendler is your
               preferred choice.
             </p>
           </AttentionSeeker>

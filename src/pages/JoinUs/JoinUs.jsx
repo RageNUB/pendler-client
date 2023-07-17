@@ -72,11 +72,14 @@ const JoinUs = () => {
     <div>
       <Navbar></Navbar>
       <div className="text-center mt-10 space-y-5 max-w-6xl w-full mx-auto">
-        <h1 className="text-4xl font-bold uppercase">Contact Our Firm</h1>
+        <div className="flex flex-col justify-center items-center gap-4">
+          <h1 className="text-4xl font-bold text-center">Contact Our Firm</h1>
+          <hr className="h-2.5 w-36 bg-primary mb-10" />
+        </div>
         <p className="text-lg">
           We are a tight-knit team of changemakers on a mission to radically
           transform the ride-sharing sector. For any discussions or business
-          proposals,you can drop us a mail to pendlerofficial1@gmail.com. Any
+          proposals, you can drop us a mail to pendlerofficial1@gmail.com. Any
           queries / feedback, feel free to reach out to us through this form. We
           would love to hear from you.
         </p>

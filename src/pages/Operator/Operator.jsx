@@ -73,14 +73,6 @@ const Operator = () => {
     } else setError2("Only Characters allowed");
   };
 
-  const onChangeModel = (e) => {
-    const re = /^[A-Za-z0-9 ]+$/;
-    if (e.target.value === "" || re.test(e.target.value)) {
-      setvalue6(e.target.value);
-      setModel("");
-    } else setModel("Only characters and numbers allowed");
-  };
-
   const onChange2 = (e) => {
     const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {

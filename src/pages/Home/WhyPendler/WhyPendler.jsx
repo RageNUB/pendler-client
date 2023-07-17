@@ -17,7 +17,7 @@ const WhyPendler = () => {
             <p className="text-2xl break-words mb-5 text-[#666d7c] font-normal">
               Spread the word and earn rewards! With Pendler&apos;s unique
               referral model, you and your friends can enjoy <span className="font-bold text-primary">Exclusive Benefits
-              for a Lifetime</span>, while growing our community together.
+              for a Lifetime</span> while growing our community together.
             </p>
           </AttentionSeeker>
         </div>

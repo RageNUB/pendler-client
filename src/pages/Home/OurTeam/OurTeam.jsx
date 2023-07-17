@@ -9,7 +9,7 @@ import LazyLoad from "react-lazy-load";
 const OurTeam = ({ title }) => {
   return (
     <div className="mt-12 lg:mt-6 mb-28">
-      <h1 className="text-xl lg:text-5xl font-bold mb-3 text-center">
+      <h1 className="text-xl lg:text-4xl font-bold mb-3 text-center">
         <span className="bg-primary text-white px-5 py-2 rounded-3xl">
           {title}
         </span>

@@ -32,7 +32,7 @@ const FAQs = () => {
                   PENDLER is a ride-sharing platform that connects customers
                   with reliable drivers. Customers can book rides through our
                   user-friendly app, and drivers can accept and complete those
-                  rides, ensuring a seamless experience for all.
+                  rides ensuring a seamless experience for all.
                 </p>
               </div>
             </div>
@@ -49,10 +49,10 @@ const FAQs = () => {
               <div className="collapse-content">
                 <p>
                   At PENDLER, we prioritize both customers and drivers. We offer
-                  a low commission model, ensuring drivers earn more while
+                  a low commission model ensuring drivers earn more while
                   customers enjoy affordable rides. Our subscription system
-                  provides drivers with a steady flow of customers, enhancing
-                  their earning potential and Work satisfaction.
+                  provides drivers with a steady flow of customers enhancing
+                  their earning potential and work satisfaction.
                 </p>
               </div>
             </div>
@@ -69,8 +69,8 @@ const FAQs = () => {
                 <p>
                   To become a driver on PENDLER, simply sign up on our website
                   and complete the registration process. Our team will review
-                  your application, and once approved, you can start accepting
-                  ride requests and earning money.
+                  your application in 2-3 days. Once approved, you can start accepting
+                  ride requests and earn money.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const FAQs = () => {
                 <p>
                   As a PENDLER driver, you&apos;ll enjoy numerous benefits,
                   including higher earnings, a flexible schedule, access to our
-                  exclusive driver perks and rewards, and a supportive community
+                  exclusive driver perks / rewards and a supportive community
                   of fellow drivers. We value your success and aim to provide
                   you with the best experience in the ride-sharing industry.
                 </p>
@@ -105,12 +105,12 @@ const FAQs = () => {
               <div className="collapse-content">
                 <p>
                   The subscription system for drivers provides a range of
-                  benefits, including a steady stream of customers, increased
-                  earnings, and priority access to ride requests. Drivers can
-                  choose from daily, weekly, or monthly plans and receive the
+                  benefits including a steady stream of customers, increased
+                  earnings and priority access to ride requests. Drivers can
+                  choose from daily, weekly or monthly plans and receive the
                   full fare amount from each ride without any commission fees
                   deducted. They can track their earnings in real-time, withdraw
-                  instantly or at regular intervals, and have the opportunity to
+                  instantly or at regular intervals and have the opportunity to
                   build a successful ride-sharing business with stability and
                   control over their earnings.
                 </p>
@@ -129,11 +129,11 @@ const FAQs = () => {
               <div className="collapse-content">
                 <p>
                   The subscription system for drivers in Pendler offers
-                  increased earnings, as drivers keep their full earnings
-                  without any commission deducted. It provides a steady stream
+                  increased earnings as drivers save their full earnings
+                  without any commissions deducted. It provides a steady stream
                   of customers, priority access to ride requests, flexibility in
                   choosing subscription plans, financial stability, control and
-                  ownership over earnings, support and training, and a
+                  ownership over earnings, support & training and a
                   driver-centric model that prioritizes their success and
                   satisfaction.
                 </p>
@@ -173,8 +173,8 @@ const FAQs = () => {
               </div>
               <div className="collapse-content">
                 <p>
-                  Pendler is coming soon to Hyderabad so Stay tuned for the
-                  official launch, Be among the first to enjoy the benefits of
+                  Pendler is coming soon to Hyderabad so stay tuned for the
+                  official launch and be among the first to enjoy the benefits of
                   our innovative ride-sharing platform. Sign up for updates and
                   be part of the Pendler community as we change the way you shuttle.
                 </p>
