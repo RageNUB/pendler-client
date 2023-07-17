@@ -18,10 +18,10 @@ const OurStory = () => {
       </Helmet>
       <Navbar></Navbar>
       <div className="text-center mt-10 space-y-5">
-        <h1 className="text-4xl font-bold uppercase">
+        <h1 className="text-4xl font-bold uppercase text-primary">
           Revolutionizing Ride-Sharing
         </h1>
-        <p className="text-lg">
+        <p className="text-xl">
           Our mission is to provide a socially responsible and cost-effective
           ride-sharing platform <br />
           that prioritizes customer satisfaction and empowers drivers to grow
@@ -84,58 +84,58 @@ const OurStory = () => {
         </h3>
         <div className="space-y-5 text-lg mt-8">
           <p>
-            In a world where commuting had become a daily struggle, our
-            founders, came together with a shared vision to revolutionize the
+            In a world where commuting had become a daily struggle, our founders
+            had come together with a shared vision to revolutionize the
             ride-sharing industry. Frustrated by the challenges faced by both
-            riders and drivers, they embarked on a journey to create a platform
-            that would address these pain points and redefine the way people
-            commute.{" "}
+            riders and drivers, we embarked on a voyage to come up with an
+            application that addresses these pain points and redefines the way
+            people commute.{" "}
           </p>
           <p>
-            Driven by their passion for innovation and their desire to make a
-            meaningful impact, Our founders combined their expertise in
-            technology and business to lay the foundation of PENDLER. They
-            believed that by leveraging technology and fostering a
-            driver-centric approach, they could create a platform that not only
-            provided convenience to riders but also empowered drivers to thrive.{" "}
+            Driven by our passion for innovation and desire to make a meaningful
+            impact, we had combined our expertise in technology and business to
+            lay the foundation of PENDLER. This led to the belief of providing
+            convenience to riders along with empowering the drivers to thrive by
+            leveraging the technology and fostering a driver-centric approach.{" "}
           </p>
           <p>
-            Their journey began with countless hours of brainstorming,
-            conducting market research, and engaging with drivers and riders to
-            understand their needs. They assembled a diverse team of like-minded
-            individuals who shared their vision and were equally passionate
-            about making a difference.{" "}
+            And the journey began with countless hours of brainstorming,
+            conducting market research and engaging with the group of drivers
+            and riders to understand their needs. This industrialized us to
+            assemble a diverse team of like-minded individuals who shared their
+            vision and were equally passionate about adding a difference.{" "}
           </p>
           <p>
-            Together, they meticulously crafted a zero commission model that
-            ensured drivers received fair earnings, while riders enjoyed
-            affordable and reliable rides. They introduced a subscription system
-            that provided drivers with a dedicated subscriber base, ensuring a
-            steady flow of customers and a sense of ownership over their
-            business.{" "}
+            Together, we meticulously crafted a zero commission model that
+            ensured drivers received their fair earnings, while riders enjoyed
+            the exclusive perk of affordable and reliable rides. Collectively we
+            inducted a subscription system that enables drivers with a dedicated
+            subscriber base bringing a steady flow of customers and a sense of
+            ownership over their business.{" "}
           </p>
           <p>
-            Throughout their journey, our founders faced numerous challenges,
-            but their unwavering determination and belief in their mission kept
-            them going. They pushed the boundaries of innovation, embraced
-            feedback from their growing community of drivers and riders, and
-            constantly iterated to improve the platform.{" "}
+            In our planning process, we faced numerous challenges but with our
+            unwavering determination we kept our mission going forward. It
+            evolved in pushing the boundaries of innovation, embracing feedback
+            from our ever-growing community folks and constantly iterating to
+            improve the application.{" "}
           </p>
           <p>
-            Today, PENDLER stands as a testament to their dedication and
-            relentless pursuit of a better ride-sharing experience. It is a
-            platform built on the foundation of driver empowerment, customer
+            Today, PENDLER stands as a testament to the dedication and
+            relentless pursuit of a better ride-hailing experience. It&apos;s a
+            platform built on the foundations of driver empowerment, customer
             satisfaction, and social responsibility.{" "}
           </p>
           <p>
-            As founders of PENDLER we are committed to driving positive change
-            in the transportation industry. They continue to lead the PENDLER
-            team, inspiring innovation, fostering a culture of collaboration,
-            and ensuring that the platform remains true to its mission of
-            transforming the way we commute.{" "}
+            As a Core-Team of PENDLER, we are committed to drive a positive
+            change in the transportation industry. It would be our asset to form
+            a culture of collaboration, inspire invention along with staying
+            true to our goal by transforming the way we commute.{" "}
           </p>
         </div>
-        <OurTeam title={false}></OurTeam>
+        <div className="pt-14">
+          <OurTeam title={"OUR TEAM"}></OurTeam>
+        </div>
       </div>
     </div>
   );

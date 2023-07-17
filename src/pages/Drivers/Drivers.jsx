@@ -33,7 +33,7 @@ const Drivers = () => {
       setError("");
     } else setError("Only Characters allowed");
   };
-  
+
   const onChange2 = (e) => {
     const re = /^[0-9]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
@@ -408,7 +408,9 @@ const Drivers = () => {
         <h1 className="text-5xl font-bold text-center mt-14 mb-10">
           Drive with Purpose, Earn with Pride.
         </h1>
-        <h3 className="text-4xl font-bold text-center mb-8">0% commission</h3>
+        <h3 className="text-5xl font-bold text-center mb-8 text-primary">
+          0% Commission
+        </h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center max-w-6xl mx-auto  gap-6">
           <div>
             <h1 className="text-4xl font-bold mb-3">
@@ -429,18 +431,19 @@ const Drivers = () => {
         </div>
       </div>
       <div className="max-w-6xl mx-auto lg:-mt-8 px-4 mt-5 ">
-        <h3 className="text-4xl font-bold text-center mb-8">
-          Unlocking Opportunities for Drivers{" "}
-        </h3>
+        <div className="flex flex-col justify-center items-center gap-4">
+          <h1 className="text-4xl font-bold text-center">Unlocking Opportunities for Drivers</h1>
+          <hr className="h-2.5 w-36 bg-primary mb-12" />
+        </div>
         <div className="space-y-4 text-2xl mb-28 text-[#424754]">
           <p>
-            Our platform offers drivers numerous benefits, including higher
-            earnings through our <b>NO commission model</b>, with our{" "}
-            <b>driver-centric approach</b>, we aim to <b>empower drivers</b> by
+            Our platform offers drivers numerous benefits including higher
+            earnings through our <b className="text-primary">NO commission model</b>. With our{" "}
+            <b className="text-primary">driver-centric approach</b>, we aim to <b className="text-primary">empower drivers</b> by
             providing them with a supportive ecosystem that enables growth,{" "}
-            <b>financial stability</b>, and enhanced Work satisfaction. By
+            <b className="text-primary">financial stability</b>, and enhanced work satisfaction. By
             joining our platform, drivers can experience improved livelihoods,
-            increased flexibility, and a rewarding partnership that prioritizes
+            increased flexibility and a rewarding partnership that prioritizes
             Driver&apos;s success.{" "}
           </p>
           <p>

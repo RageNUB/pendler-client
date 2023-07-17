@@ -46,9 +46,11 @@ const Operator = () => {
   const [value3, setvalue3] = useState("");
   const [value4, setvalue4] = useState("");
   const [value5, setvalue5] = useState("");
+  const [value6, setvalue6] = useState("");
 
   const [error, setError] = useState("");
   const [error2, setError2] = useState("");
+  const [model, setModel] = useState("");
   const [num, setnum] = useState("");
   const [num2, setnum2] = useState("");
   const [count, setCount] = useState("");
@@ -69,6 +71,14 @@ const Operator = () => {
       setvalue4(e.target.value);
       setError2("");
     } else setError2("Only Characters allowed");
+  };
+
+  const onChangeModel = (e) => {
+    const re = /^[A-Za-z0-9 ]+$/;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setvalue6(e.target.value);
+      setModel("");
+    } else setModel("Only characters and numbers allowed");
   };
 
   const onChange2 = (e) => {
@@ -180,7 +190,23 @@ const Operator = () => {
     }
   };
 
-  const handleFormChange = (index, event) => {
+  const handleFormChange = (index, event, model, numb) => {
+    if (model) {
+      const re = /^[A-Za-z0-9 ]+$/;
+      if (event.target.value === "" || re.test(event.target.value)) {
+        setvalue6(event.target.value);
+        setModel("");
+      } else setModel("Only characters and numbers allowed");
+    }
+
+    if (numb) {
+      const re = /^[0-9]+$/;
+      if (event.target.value === "" || re.test(event.target.value)) {
+        setvalue5(event.target.value);
+        setCount("");
+      } else setCount("Only numbers allowed");
+    }
+
     let data = [...carCount];
     data[index][event.target.name] = event.target.value;
     console.log(data);
@@ -424,9 +450,9 @@ const Operator = () => {
                             </label>
                             <input
                               type="text"
-                              value={cars.model}
+                              value={cars.model && value6}
                               onChange={(event) =>
-                                handleFormChange(index, event)
+                                handleFormChange(index, event, true, false)
                               }
                               name="model"
                               placeholder="Model Name"
@@ -434,6 +460,7 @@ const Operator = () => {
                               required
                             />
                           </div>
+                          <p className="text-warning">{model}</p>
                           <div>
                             <label>
                               <p className="text-md font-semibold text-white">
@@ -441,10 +468,10 @@ const Operator = () => {
                               </p>
                             </label>
                             <input
-                              type="number"
-                              value={cars.cars}
+                              type="text"
+                              value={cars.cars && value5}
                               onChange={(event) =>
-                                handleFormChange(index, event)
+                                handleFormChange(index, event, false, true)
                               }
                               name="cars"
                               placeholder="Number of Cars"
@@ -452,6 +479,7 @@ const Operator = () => {
                               required
                             />
                           </div>
+                          <p className="text-warning">{count}</p>
                         </div>
                       )}
                     </div>

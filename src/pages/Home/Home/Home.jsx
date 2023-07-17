@@ -43,7 +43,7 @@ const Home = () => {
         <WhyPendler></WhyPendler>
       </div>
       <div data-aos="fade-up">
-        <OurTeam title={true}></OurTeam>
+        <OurTeam title={"Passionate Minds Driving Innovation"}></OurTeam>
       </div>
       <div data-aos="fade-up">
         <FAQs></FAQs>
