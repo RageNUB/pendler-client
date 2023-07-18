@@ -226,7 +226,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <img className="w-[8rem]" src={illustration} alt="" />
+          <img className="w-[5rem] lg:w-[8rem]" src={illustration} alt="" />
         </div>
       </div>
     </div>

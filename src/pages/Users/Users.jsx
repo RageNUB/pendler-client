@@ -229,7 +229,7 @@ const Users = () => {
           </div>
           <div className="col-span-2">
             <LazyLoad>
-              <img className="w-[39rem] max-w-xl" src={illustration4} alt="" />
+              <img className="w-[39rem] lg:max-w-xl" src={illustration4} alt="" />
             </LazyLoad>
           </div>
         </div>

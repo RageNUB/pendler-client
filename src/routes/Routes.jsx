@@ -9,6 +9,7 @@ import Users from "../pages/Users/Users";
 import Articles from "../pages/Articles/Articles";
 import JoinUs from "../pages/JoinUs/JoinUs";
 import Operator from "../pages/Operator/Operator";
+import Error from "../components/Error/Error";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
                 element: <Articles></Articles>
             }
         ]
+    },
+    {
+        path: "*",
+        element: <Error></Error>
     }
 ]);
 

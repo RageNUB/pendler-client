@@ -86,8 +86,8 @@ const OurStory = () => {
           How Pendler&apos;s Journey Took Its Shape
         </h3>
         <div className="space-y-5 text-lg mt-8">
-          <div className="grid grid-cols-3 lg:grid-cols-5 justify-center items-center ">
-            <div className="space-y-4 col-span-2 lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center ">
+            <div className="space-y-4 lg:col-span-3">
               <p>
                 In a world where commuting had become a daily struggle, our
                 founders had come together with a shared vision to revolutionize
@@ -109,8 +109,8 @@ const OurStory = () => {
               <img className="w-[39rem]" src={img1} alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-3 lg:grid-cols-5 justify-center items-center ">
-            <div className="space-y-4 col-span-2 lg:col-span-3 order-1 lg:order-2">
+          <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center ">
+            <div className="space-y-4 lg:col-span-3 order-1 lg:order-2">
               <p>
                 And the journey began with countless hours of brainstorming,
                 conducting market research and engaging with the group of
@@ -132,8 +132,8 @@ const OurStory = () => {
               <img className="w-[39rem]" src={img3} alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-3 lg:grid-cols-5 justify-center items-center ">
-            <div className="space-y-4 col-span-2 lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center ">
+            <div className="space-y-4 lg:col-span-3">
               <p>
                 In our planning process, we faced numerous challenges but with
                 our unwavering determination we kept our mission going forward.

@@ -89,7 +89,7 @@ const JoinUs = () => {
           Drop Your Queries / Inputs
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center max-w-6xl mx-auto mt-3 py-8">
-          <div className="px-2 order-1 lg:order-2">
+          <div className="px-4 order-1 lg:order-2">
             <LazyLoad>
               <img className="w-[39rem]" src={illustration2} alt="" />
             </LazyLoad>
