@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logoText.png";
 
-const Footer = ({color}) => {
+const Footer = ({ color }) => {
   return (
     <div className="border-t-2 border-slate-900 w-full">
       <div className="max-w-6xl mx-auto">
@@ -16,19 +16,29 @@ const Footer = ({color}) => {
           </div>
           <div>
             <span className="footer-title text-base">Usefull Links</span>
-            <Link to="/our-story"><p className="link link-hover text-xl font-medium">Our Story</p></Link>
-            <Link to="/drivers"><p className="link link-hover text-xl font-medium">Drivers</p></Link>
-            <Link to="/users"><p className="link link-hover text-xl font-medium">Users</p></Link>
-            <Link to="/join-us"><p className="link link-hover text-xl font-medium">Collaborate</p></Link>
+            <Link to="/our-story">
+              <p className="link link-hover text-xl font-medium">Our Story</p>
+            </Link>
+            <Link to="/drivers">
+              <p className="link link-hover text-xl font-medium">Drivers</p>
+            </Link>
+            <Link to="/users">
+              <p className="link link-hover text-xl font-medium">Users</p>
+            </Link>
+            <Link to="/join-us">
+              <p className="link link-hover text-xl font-medium">Collaborate</p>
+            </Link>
           </div>
           <div>
             <span className="footer-title text-base">Reach Out</span>
-            <p className="text-xl font-medium">
-              401, Sreeman Rajals Residency, <br /> St No 8, Behind Bank of
-              Baroda, <br />
-              Shivam Road, New Nallakunta, <br /> Hyderabad, India
+            <p className="text-xl font-medium mb-2">
+              Shivam Road, New Nallakunta, <br /> Behind Bank of Baroda, <br /> Telangana,
+              Hyderabad, India
             </p>
-            <a href="mailto:pendlerofficial1@gmail.com" className="link link-hover text-xl font-medium">
+            <a
+              href="mailto:pendlerofficial1@gmail.com"
+              className="link link-hover text-xl font-medium"
+            >
               Email:{" "}
               <span className="font-medium">pendlerofficial1@gmail.com</span>
             </a>
@@ -89,7 +99,13 @@ const Footer = ({color}) => {
         </footer>
       </div>
 
-      <div className={`${color ? "bg-base-100 text-slate-900 font-bold" : "bg-slate-900 text-white font-semibold"} footer footer-center p-4`}>
+      <div
+        className={`${
+          color
+            ? "bg-base-100 text-slate-900 font-bold"
+            : "bg-slate-900 text-white font-semibold"
+        } footer footer-center p-4`}
+      >
         <div>
           <p className="text-lg">
             Copyright © 2023 : All Rights Reserved by PENDLER
