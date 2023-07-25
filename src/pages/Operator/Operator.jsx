@@ -414,23 +414,23 @@ const Operator = () => {
                                 handleFormChange(index, value)
                               }
                             >
-                              <option value="Mini (3 Seater)">
-                                Mini ( 3 Seater)
+                              <option value="Mini (3 Passengers)">
+                                Mini ( 3 Passengers)
                               </option>
-                              <option value="Hatch Back (4 Seater)">
-                                Hatch Back (4 Seater)
+                              <option value="Hatch Back (4 Passengers)">
+                                Hatch Back (4 Passengers)
                               </option>
-                              <option value="Sedan (4+ Seater)">
-                                Sedan (4+ Seater)
+                              <option value="Sedan (4+ Passengers)">
+                                Sedan (4+ Passengers)
                               </option>
-                              <option value="Mini SUV (5 Seater)">
-                                Mini SUV (5 Seater)
+                              <option value="Mini SUV (5 Passengers)">
+                                Mini SUV (5 Passengers)
                               </option>
-                              <option value="SUV (7 Seater)">
-                                SUV (7 Seater)
+                              <option value="SUV (7 Passengers)">
+                                SUV (7 Passengers)
                               </option>
-                              <option value="SUV Plus (8 Seater)">
-                                SUV Plus (8 Seater)
+                              <option value="SUV Plus (8 Passengers)">
+                                SUV Plus (8 Passengers)
                               </option>
                             </select>
                           </div>

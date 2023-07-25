@@ -319,23 +319,23 @@ const Drivers = () => {
                               className="select select-bordered select-primary w-full"
                               name="type"
                             >
-                              <option value="Mini (3 Seater)">
-                                Mini ( 3 Seater)
+                              <option value="Mini (3 Passengers)">
+                                Mini ( 3 Passengers)
                               </option>
-                              <option value="Hatch Back (4 Seater)">
-                                Hatch Back (4 Seater)
+                              <option value="Hatch Back (4 Passengers)">
+                                Hatch Back (4 Passengers)
                               </option>
-                              <option value="Sedan (4+ Seater)">
-                                Sedan (4+ Seater)
+                              <option value="Sedan (4+ Passengers)">
+                                Sedan (4+ Passengers)
                               </option>
-                              <option value="Mini SUV (5 Seater)">
-                                Mini SUV (5 Seater)
+                              <option value="Mini SUV (5 Passengers)">
+                                Mini SUV (5 Passengers)
                               </option>
-                              <option value="SUV (7 Seater)">
-                                SUV (7 Seater)
+                              <option value="SUV (7 Passengers)">
+                                SUV (7 Passengers)
                               </option>
-                              <option value="SUV Plus (8 Seater)">
-                                SUV Plus (8 Seater)
+                              <option value="SUV Plus (8 Passengers)">
+                                SUV Plus (8 Passengers)
                               </option>
                             </select>
                           </div>
@@ -432,19 +432,23 @@ const Drivers = () => {
       </div>
       <div className="max-w-6xl mx-auto lg:-mt-8 px-4 mt-5 ">
         <div className="flex flex-col justify-center items-center gap-4">
-          <h1 className="text-4xl font-bold text-center">Unlocking Opportunities for Drivers</h1>
+          <h1 className="text-4xl font-bold text-center">
+            Unlocking Opportunities for Drivers
+          </h1>
           <hr className="h-2.5 w-36 bg-primary mb-12" />
         </div>
         <div className="space-y-4 text-2xl mb-28 text-[#424754]">
           <p>
             Our platform offers drivers numerous benefits including higher
-            earnings through our <b className="text-primary">NO commission model</b>. With our{" "}
-            <b className="text-primary">driver-centric approach</b>, we aim to <b className="text-primary">empower drivers</b> by
-            providing them with a supportive ecosystem that enables growth,{" "}
-            <b className="text-primary">financial stability</b>, and enhanced work satisfaction. By
-            joining our platform, drivers can experience improved livelihoods,
-            increased flexibility and a rewarding partnership that prioritizes
-            Driver&apos;s success.{" "}
+            earnings through our{" "}
+            <b className="text-primary">NO commission model</b>. With our{" "}
+            <b className="text-primary">driver-centric approach</b>, we aim to{" "}
+            <b className="text-primary">empower drivers</b> by providing them
+            with a supportive ecosystem that enables growth,{" "}
+            <b className="text-primary">financial stability</b>, and enhanced
+            work satisfaction. By joining our platform, drivers can experience
+            improved livelihoods, increased flexibility and a rewarding
+            partnership that prioritizes Driver&apos;s success.{" "}
           </p>
           <p>
             <span className="font-bold">Zero Commission Model: </span>We offer

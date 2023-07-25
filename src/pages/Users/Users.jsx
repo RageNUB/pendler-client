@@ -229,7 +229,11 @@ const Users = () => {
           </div>
           <div className="col-span-2">
             <LazyLoad>
-              <img className="w-[39rem] lg:max-w-xl" src={illustration4} alt="" />
+              <img
+                className="w-[39rem] lg:max-w-xl"
+                src={illustration4}
+                alt=""
+              />
             </LazyLoad>
           </div>
         </div>
@@ -250,9 +254,9 @@ const Users = () => {
             <p className="text-2xl break-words mb-5 text-base-300 font-normal">
               By riding with us, you not only save on fares but also contribute
               to the success of our dedicated drivers. Our unique model ensures
-              that drivers earn more, creating a happy medium where you
-              enjoy cost-effective transportation while supporting the
-              hardworking individuals who make it possible.
+              that drivers earn more, creating a happy medium where you enjoy
+              cost-effective transportation while supporting the hardworking
+              individuals who make it possible.
             </p>
           </div>
         </div>
