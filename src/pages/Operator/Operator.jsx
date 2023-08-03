@@ -181,7 +181,7 @@ const Operator = () => {
       handlePostData(operatorInfoCar);
     }
   };
-const numbe=['first','second','third','fourth','fifth','sixth','seventh'];
+const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
   const handleFormChange = (index, event, model, numb) => {
     if (model) {
       const re = /^[A-Za-z0-9 ]+$/;
