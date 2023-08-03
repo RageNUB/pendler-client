@@ -15,6 +15,9 @@ const Drivers = () => {
   const [bike, setBike] = useState(true);
   const [car, setCar] = useState(false);
   const [auto, setAuto] = useState(false);
+  const [bikeev, setBikeev] = useState(true);
+  const [carev, setCarev] = useState(false);
+  const [autoev, setAutoev] = useState(false);
 
   const [value, setvalue] = useState("");
   const [value1, setvalue1] = useState("");
@@ -64,14 +67,47 @@ const Drivers = () => {
       setBike(true);
       setCar(false);
       setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
     } else if (vehicleRef.current.value === "car") {
       setBike(false);
       setCar(true);
       setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
     } else if (vehicleRef.current.value === "auto") {
       setBike(false);
       setCar(false);
       setAuto(true);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "bikeev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(false);
+      setBikeev(true);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "carev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(true);
+      setBikeev(false);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "autoev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(true);
     }
   };
 
@@ -243,9 +279,12 @@ const Drivers = () => {
                       name="vehicle"
                       required={true}
                     >
-                      <option value="bike">Bike</option>
-                      <option value="car">Car</option>
-                      <option value="auto">Auto</option>
+                    <option value="bike">Bike</option>
+                    <option value="bikeev">Bike EV</option>
+                    <option value="car">Car </option>
+                    <option value="carev">Car EV</option>
+                    <option value="auto">Auto</option>
+                    <option value="autoev">Auto EV</option>
                     </select>
                   </div>
 
@@ -286,7 +325,44 @@ const Drivers = () => {
                       </div>
                     </div>
                   )}
-                  {auto && (
+                  {bikeev && (
+                    <div>
+                      <div>
+                        <label>
+                          <p className="text-md font-semibold text-white">
+                            Model Name
+                          </p>
+                        </label>
+                        <input
+                          type="text"
+                          value={value3}
+                          onChange={onChangeModel}
+                          name="model"
+                          placeholder="Model Name"
+                          className="input input-bordered input-primary w-full"
+                          required
+                        />
+                        <p className="text-warning">{model}</p>
+                      </div>
+                      <div>
+                        <label>
+                          <p className="text-md font-semibold text-white">
+                            Plate Number
+                          </p>
+                        </label>
+                        <input
+                          type="text"
+                          name="plateNumber"
+                          placeholder="Plate Number"
+                          value={value2}
+                          onChange={onChange4}
+                          className="input input-bordered input-primary w-full"
+                          required
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {autoev && (
                     <div>
                       <label>
                         <p className="text-md font-semibold text-white">
@@ -336,6 +412,78 @@ const Drivers = () => {
                               </option>
                               <option value="SUV Plus (8 Passengers)">
                                 SUV Plus (8 Passengers)
+                              </option>
+                            </select>
+                          </div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Model Name
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              value={value3}
+                              onChange={onChangeModel}
+                              name="model"
+                              placeholder="Model Name"
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                          <p className="text-warning">{model}</p>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Plate Number
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              name="plateNumber"
+                              placeholder="Plate Number"
+                              value={value2}
+                              onChange={onChange4}
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      {carev && (
+                        <div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Pick Your Car Type
+                              </p>
+                            </label>
+                            <select
+                              className="select select-bordered select-primary w-full"
+                              name="type"
+                            >
+                              <option value="Mini (3 Passengers)">
+                                Mini EV( 3 Passengers)
+                              </option>
+                              <option value="Hatch Back (4 Passengers)">
+                                Hatch Back EV(4 Passengers)
+                              </option>
+                              <option value="Sedan (4+ Passengers)">
+                                Sedan EV(4+ Passengers)
+                              </option>
+                              <option value="Mini SUV (5 Passengers)">
+                                Mini SUV EV(5 Passengers)
+                              </option>
+                              <option value="SUV (7 Passengers)">
+                                SUV EV(7 Passengers)
+                              </option>
+                              <option value="SUV Plus (8 Passengers)">
+                                SUV Plus EV(8 Passengers)
                               </option>
                             </select>
                           </div>

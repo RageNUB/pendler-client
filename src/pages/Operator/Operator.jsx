@@ -4,7 +4,9 @@ import LazyLoad from "react-lazy-load";
 import illustration2 from "../../assets/undraw_access_account_re_8spm.svg";
 import { useEffect, useRef, useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
+import {AiFillMinusCircle} from "react-icons/ai"
 import Swal from "sweetalert2";
+import './operator.css';
 
 const Operator = () => {
   useEffect(() => {
@@ -13,6 +15,9 @@ const Operator = () => {
   const [bike, setBike] = useState(true);
   const [car, setCar] = useState(false);
   const [auto, setAuto] = useState(false);
+  const [bikeev, setBikeev] = useState(true);
+  const [carev, setCarev] = useState(false);
+  const [autoev, setAutoev] = useState(false);
   const typeRef = useRef("Mini (3 Seater)");
 
   const handleModel = () => {
@@ -29,14 +34,47 @@ const Operator = () => {
       setBike(true);
       setCar(false);
       setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
     } else if (vehicleRef.current.value === "car") {
       setBike(false);
       setCar(true);
       setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
     } else if (vehicleRef.current.value === "auto") {
       setBike(false);
       setCar(false);
       setAuto(true);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "bikeev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(false);
+      setBikeev(true);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "carev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(true);
+      setBikeev(false);
+      setAutoev(false);
+    }
+    else if (vehicleRef.current.value === "autoev") {
+      setBike(false);
+      setCar(false);
+      setAuto(false);
+      setCarev(false);
+      setBikeev(false);
+      setAutoev(true);
     }
   };
 
@@ -209,7 +247,16 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
     event.preventDefault();
     let newField = { type: handleModel(), model: "", cars: "" };
     setCarCount([...carCount, newField]);
-  };
+  }; 
+  const subField = (event) => {
+    event.preventDefault();
+    setCarCount((current) =>
+    current.filter((element) => {
+      return element !== carCount[carCount.length-1];
+    })
+    )
+  };   
+
 
   return (
     <div>
@@ -353,8 +400,11 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                   >
                     {/* <option disabled>Pick Your Car Type</option> */}
                     <option value="bike">Bike</option>
-                    <option value="car">Car</option>
+                    <option value="bikeev">Bike EV</option>
+                    <option value="car">Car </option>
+                    <option value="carev">Car EV</option>
                     <option value="auto">Auto</option>
+                    <option value="autoev">Auto EV</option>
                   </select>
                 </div>
 
@@ -363,6 +413,25 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                     <label>
                       <p className="text-md font-semibold text-white">
                         Number of Bikes
+                      </p>
+                    </label>
+                    <input
+                      type="text"
+                      value={value5}
+                      onChange={onChangeCount}
+                      name="bike"
+                      placeholder="Number of Bikes"
+                      className="input input-bordered input-primary w-full"
+                      required
+                    />
+                    <p className="text-warning">{count}</p>
+                  </div>
+                )}
+                {bikeev && (
+                  <div>
+                    <label>
+                      <p className="text-md font-semibold text-white">
+                        Number of Bikes EV
                       </p>
                     </label>
                     <input
@@ -396,8 +465,27 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                     <p className="text-warning">{count}</p>
                   </div>
                 )}
+                {autoev && (
+                  <div>
+                    <label>
+                      <p className="text-md font-semibold text-white">
+                        Number of Autos EV
+                      </p>
+                    </label>
+                    <input
+                      type="text"
+                      value={value5}
+                      onChange={onChangeCount}
+                      name="auto"
+                      placeholder="Number of Autos"
+                      className="input input-bordered input-primary w-full"
+                      required
+                    />
+                    <p className="text-warning">{count}</p>
+                  </div>
+                )}
                 <div>
-                {console.log(carCount)}
+                  {console.log(carCount)}
                   {carCount.map((cars, index) => (
                     <div key={index}>
                     { console.log(index,carCount.length)}
@@ -419,36 +507,126 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                               <option value="Mini (3 Passengers)">
                                 Mini ( 3 Passengers)
                               </option>
-                              <option value="Mini EV (3 Passengers)">
-                                Mini ( 3 Passengers)
-                              </option>
+                      
                               <option value="Hatch Back (4 Passengers)">
                                 Hatch Back (4 Passengers)
                               </option>
-                              <option value="Hatch Back (4 Passengers)">
-                                Hatch Back EV (4 Passengers)
-                              </option>
+                       
                               <option value="Sedan (4+ Passengers)">
                                 Sedan (4+ Passengers)
                               </option>
-                              <option value="Sedan (4+ Passengers)">
-                                Sedan EV (4+ Passengers)
-                              </option>
+                    
                               <option value="Mini SUV (5 Passengers)">
                                 Mini SUV (5 Passengers)
                               </option>
-                              <option value="Mini SUV (5 Passengers)">
-                                Mini SUV EV (5 Passengers)
-                              </option>
+                   
                               <option value="SUV (7 Passengers)">
                                 SUV (7 Passengers)
                               </option>
-                              <option value="SUV (7 Passengers)">
-                                SUV EV (7 Passengers)
-                              </option>
+       
                               <option value="SUV Plus (8 Passengers)">
                                 SUV Plus (8 Passengers)
                               </option>
+      
+                            </select>
+                          </div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Model Name
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              value={cars.model && value6}
+                              onChange={(event) =>
+                                handleFormChange(index, event, true, false)
+                              }
+                              name="model"
+                              placeholder="Model Name"
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                          <p className="text-warning">{model}</p>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                Number of Cars
+                              </p>
+                            </label>
+                            <input
+                              type="text"
+                              value={cars.cars && value5}
+                              onChange={(event) =>
+                                handleFormChange(index, event, false, true)
+                              }
+                              name="cars"
+                              placeholder="Number of Cars"
+                              className="input input-bordered input-primary w-full"
+                              required
+                            />
+                          </div>
+                          <p className="text-warning">{count}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                {car && (
+                  <div  className="flex justify-start">
+                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>=1? "":"dis"}`}>
+                      <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
+                    </button>}
+                    <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>
+                      <FaPlusCircle></FaPlusCircle> Add More Cars if needed
+                    </button>
+                  </div>
+                )}
+
+
+
+                <div>
+                {console.log(carCount)}
+                  {carCount.map((cars, index) => (
+                    <div key={index}>
+                    { console.log(index,carCount.length)}
+                      {carev && index>=carCount.length-1 &&(
+                        <div>
+                          <div>
+                            <label>
+                              <p className="text-md font-semibold text-white">
+                                {`Pick Your Car Type for ${numbe[index] || index+1 } booking`}
+                              </p>
+                            </label>
+                            <select
+                              className="select select-bordered select-primary w-full"
+                              name="type"
+                              onChange={(value) =>
+                                handleFormChange(index, value)
+                              }
+                            >
+                    
+                              <option value="Mini EV (3 Passengers)">
+                                Mini EV( 3 Passengers)
+                              </option>
+
+                              <option value="Hatch Back (4 Passengers)">
+                                Hatch Back EV (4 Passengers)
+                              </option>
+                
+                              <option value="Sedan (4+ Passengers)">
+                                Sedan EV (4+ Passengers)
+                              </option>
+                   
+                              <option value="Mini SUV (5 Passengers)">
+                                Mini SUV EV (5 Passengers)
+                              </option>
+      
+                              <option value="SUV (7 Passengers)">
+                                SUV EV (7 Passengers)
+                              </option>
+         
                               <option value="SUV Plus (8 Passengers)">
                                 SUV Plus EV (8 Passengers)
                               </option>
@@ -498,9 +676,12 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                   ))}
                 </div>
 
-                {car && (
-                  <div onClick={addField} className="flex justify-end">
-                    <button className="btn btn-xs btn-primary">
+                {carev && (
+                  <div  className="flex justify-start">
+                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>=1? "":"dis"}`}>
+                      <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
+                    </button>}
+                    <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>
                       <FaPlusCircle></FaPlusCircle> Add More Cars if needed
                     </button>
                   </div>
