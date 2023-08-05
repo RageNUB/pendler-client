@@ -219,7 +219,7 @@ const Operator = () => {
       handlePostData(operatorInfoCar);
     }
   };
-const [index,setindex]=useState();
+const [indexx,setindex]=useState(0);
 const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
   const handleFormChange = (index, event, model, numb) => {
     if (model) {
@@ -244,19 +244,33 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
     setCarCount(data);
   };
 
+  const [allCarCount, setAllCarCount] = useState([])
   const addField = (event) => {
     event.preventDefault();
+    setindex(indexx+1);
     let newField = { type: handleModel(), model: "", cars: "" };
     setCarCount([...carCount, newField]);
+    setAllCarCount([...carCount]);
   }; 
   const subField = (event) => {
     event.preventDefault();
-    setCarCount((current) =>
-    // setindex(index-1)
-    current.filter((element) => {
-      return element !== carCount[carCount.length-1];
-    })
-    )
+    setindex(indexx-1);
+    // setCarCount((current) =>
+    // // setindex(index-1)
+    // current.filter((element) => {
+    //   return element !== carCount[carCount.length-1];
+    // })
+    // )
+  };   
+  const nextField = (event) => {
+    event.preventDefault();
+    setindex(indexx+1);
+    // setCarCount((current) =>
+    // // setindex(index-1)
+    // current.filter((element) => {
+    //   return element !== carCount[carCount.length-1];
+    // })
+    // )
   };   
 
 
@@ -487,7 +501,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                   </div>
                 )}
                 <div>
-                  {console.log(carCount[0].cars)}
+                  {/* {console.log(carCount[0].cars)} */}
                   {carCount.map((cars, index) => (
                     <div key={index}>
                     {/* { console.log(index,carCount.length)} */}
@@ -496,14 +510,14 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                           <div>
                             <label>
                               <p className="text-md font-semibold text-white">
-                                {`Pick Your Car Type for ${numbe[index] || index+1 } booking`}
+                                {`Pick Your Car Type for ${numbe[indexx] || indexx+1 } Booking`}
                               </p>
                             </label>
                             <select
                               className="select select-bordered select-primary w-full"
                               name="type"
                               ref={typeRef}
-                              defaultValue={carCount[index].type}
+                              defaultValue={allCarCount[indexx]?.type}
                               onChange={(value) =>
                                 handleFormChange(index, value)
                               }
@@ -542,7 +556,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={carCount[index].model}
+                              value={allCarCount[indexx]?.model}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
                               }
@@ -561,7 +575,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={carCount[index].cars }
+                              value={allCarCount[indexx]?.cars }
                               onChange={(event) =>
                                 handleFormChange(index, event, false, true)
                               }
@@ -578,14 +592,18 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                   ))}
                 </div>
                 {car && (
-                  <div  className="flex justify-start">
-                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>1? "":"dis"}`}>
-                      <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
-                    </button>}
-                    <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>
-                      <FaPlusCircle></FaPlusCircle> Add More Cars if needed
-                    </button>
-                  </div>
+                  <div  className="flex justify-between">
+                  {console.log(allCarCount.length, indexx)}
+                  {<button onClick={subField} className={`btn btn-xs btx btxx ${indexx !== 0? "":"dis"}`}>
+                    <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
+                  </button>}
+                  <button onClick={nextField} className={`btn btn-xs btn-primary ${indexx == allCarCount.length ? "dis":""}`}>
+                    <AiFillMinusCircle></AiFillMinusCircle> view next cars 
+                  </button>
+                  <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${indexx != allCarCount.length ? "dis":""}`}>
+                    <FaPlusCircle></FaPlusCircle> Add More Cars if needed
+                  </button>
+                </div>
                 )}
 
 
@@ -594,21 +612,21 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                 
                   {carCount.map((cars, index) => (
                     <div key={index}>
-                    {console.log(carCount[index].model)}
+                    {/* {console.log(carCount[index].model)} */}
                     { console.log(index,carCount.length)}
                       {carev && index>=carCount.length-1 &&(
                         <div>
                           <div>
                             <label>
                               <p className="text-md font-semibold text-white">
-                                {`Pick Your Car Type for ${numbe[index] || index+1 } booking`}
+                                {`Pick Your Car Type for ${numbe[indexx] || indexx+1 } Booking`}
                               </p>
                             </label>
                             <select 
                               className="select select-bordered select-primary w-full"
                               name="type"
                               ref={typeRef}
-                              defaultValue={carCount[index].type}
+                              defaultValue={allCarCount[indexx]?.type}
                               onChange={(value) =>
                                 handleFormChange(index, value)
                               }
@@ -649,7 +667,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             <input
                               type="text"
                               // defaultValue={carCount[index].model}
-                              value={carCount[index].model}
+                              value={allCarCount[indexx]?.model}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
                               }
@@ -668,7 +686,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={carCount[index].cars}
+                              value={allCarCount[indexx]?.cars}
                               onChange={(event) =>
                                 handleFormChange(index, event, false, true)
                               }
@@ -686,12 +704,15 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                 </div>
 
                 {carev && (
-                  <div  className="flex justify-start">
-                    {/* {console.log(carCount.length)} */}
-                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>1? "":"dis"}`}>
+                  <div  className="flex justify-between">
+                    {console.log(allCarCount.length, indexx)}
+                    {<button onClick={subField} className={`btn btn-xs btx btxx ${indexx !== 0? "":"dis"}`}>
                       <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
                     </button>}
-                    <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>
+                    <button onClick={nextField} className={`btn btn-xs btn-primary ${indexx == allCarCount.length ? "dis":""}`}>
+                      <AiFillMinusCircle></AiFillMinusCircle> view next cars 
+                    </button>
+                    <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${indexx != allCarCount.length ? "dis":""}`}>
                       <FaPlusCircle></FaPlusCircle> Add More Cars if needed
                     </button>
                   </div>
