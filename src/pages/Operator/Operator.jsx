@@ -219,6 +219,7 @@ const Operator = () => {
       handlePostData(operatorInfoCar);
     }
   };
+const [index,setindex]=useState();
 const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
   const handleFormChange = (index, event, model, numb) => {
     if (model) {
@@ -251,6 +252,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
   const subField = (event) => {
     event.preventDefault();
     setCarCount((current) =>
+    // setindex(index-1)
     current.filter((element) => {
       return element !== carCount[carCount.length-1];
     })
@@ -485,10 +487,10 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                   </div>
                 )}
                 <div>
-                  {console.log(carCount)}
+                  {console.log(carCount[0].cars)}
                   {carCount.map((cars, index) => (
                     <div key={index}>
-                    { console.log(index,carCount.length)}
+                    {/* { console.log(index,carCount.length)} */}
                       {car && index>=carCount.length-1 &&(
                         <div>
                           <div>
@@ -538,7 +540,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={cars.model && value6}
+                              value={carCount[index].model && value6}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
                               }
@@ -557,7 +559,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={cars.cars && value5}
+                              value={carCount[index].cars }
                               onChange={(event) =>
                                 handleFormChange(index, event, false, true)
                               }
@@ -587,7 +589,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
 
 
                 <div>
-                {console.log(carCount)}
+                {console.log(carCount[0].model)}
                   {carCount.map((cars, index) => (
                     <div key={index}>
                     { console.log(index,carCount.length)}
@@ -599,35 +601,36 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                                 {`Pick Your Car Type for ${numbe[index] || index+1 } booking`}
                               </p>
                             </label>
-                            <select
+                            <select 
                               className="select select-bordered select-primary w-full"
                               name="type"
                               onChange={(value) =>
                                 handleFormChange(index, value)
                               }
+                            
                             >
                     
-                              <option value="Mini EV (3 Passengers)">
+                              <option name="type" value="Mini EV (3 Passengers)">
                                 Mini EV( 3 Passengers)
                               </option>
 
-                              <option value="Hatch Back (4 Passengers)">
+                              <option name="type" value="Hatch Back (4 Passengers)">
                                 Hatch Back EV (4 Passengers)
                               </option>
                 
-                              <option value="Sedan (4+ Passengers)">
+                              <option name="type" value="Sedan (4+ Passengers)">
                                 Sedan EV (4+ Passengers)
                               </option>
                    
-                              <option value="Mini SUV (5 Passengers)">
+                              <option name="type" value="Mini SUV (5 Passengers)">
                                 Mini SUV EV (5 Passengers)
                               </option>
       
-                              <option value="SUV (7 Passengers)">
+                              <option name="type" value="SUV (7 Passengers)">
                                 SUV EV (7 Passengers)
                               </option>
          
-                              <option value="SUV Plus (8 Passengers)">
+                              <option name="type" value="SUV Plus (8 Passengers)">
                                 SUV Plus EV (8 Passengers)
                               </option>
                             </select>
@@ -640,7 +643,8 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={cars.model && value6}
+                              defaultValue={carCount[index].model}
+                              value={carCount[index].model}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
                               }
@@ -659,7 +663,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={cars.cars && value5}
+                              value={carCount[index].cars}
                               onChange={(event) =>
                                 handleFormChange(index, event, false, true)
                               }
