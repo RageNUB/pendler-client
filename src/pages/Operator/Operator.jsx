@@ -18,7 +18,7 @@ const Operator = () => {
   const [bikeev, setBikeev] = useState(true);
   const [carev, setCarev] = useState(false);
   const [autoev, setAutoev] = useState(false);
-  const typeRef = useRef("Mini (3 Seater)");
+  const typeRef = useRef("Mini (3 Passengers)");
 
   const handleModel = () => {
     return typeRef.current.value;
@@ -502,6 +502,8 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             <select
                               className="select select-bordered select-primary w-full"
                               name="type"
+                              ref={typeRef}
+                              defaultValue={carCount[index].type}
                               onChange={(value) =>
                                 handleFormChange(index, value)
                               }
@@ -540,7 +542,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              value={carCount[index].model && value6}
+                              value={carCount[index].model}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
                               }
@@ -577,7 +579,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                 </div>
                 {car && (
                   <div  className="flex justify-start">
-                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>=1? "":"dis"}`}>
+                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>1? "":"dis"}`}>
                       <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
                     </button>}
                     <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>
@@ -589,9 +591,10 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
 
 
                 <div>
-                {console.log(carCount[0].model)}
+                
                   {carCount.map((cars, index) => (
                     <div key={index}>
+                    {console.log(carCount[index].model)}
                     { console.log(index,carCount.length)}
                       {carev && index>=carCount.length-1 &&(
                         <div>
@@ -604,6 +607,8 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             <select 
                               className="select select-bordered select-primary w-full"
                               name="type"
+                              ref={typeRef}
+                              defaultValue={carCount[index].type}
                               onChange={(value) =>
                                 handleFormChange(index, value)
                               }
@@ -614,23 +619,23 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                                 Mini EV( 3 Passengers)
                               </option>
 
-                              <option name="type" value="Hatch Back (4 Passengers)">
+                              <option name="type" value="Hatch Back EV (4 Passengers)">
                                 Hatch Back EV (4 Passengers)
                               </option>
                 
-                              <option name="type" value="Sedan (4+ Passengers)">
+                              <option name="type" value="Sedan EV (4+ Passengers)">
                                 Sedan EV (4+ Passengers)
                               </option>
                    
-                              <option name="type" value="Mini SUV (5 Passengers)">
+                              <option name="type" value="Mini SUV EV (5 Passengers)">
                                 Mini SUV EV (5 Passengers)
                               </option>
       
-                              <option name="type" value="SUV (7 Passengers)">
+                              <option name="type" value="SUV EV (7 Passengers)">
                                 SUV EV (7 Passengers)
                               </option>
          
-                              <option name="type" value="SUV Plus (8 Passengers)">
+                              <option name="type" value="SUV Plus EV (8 Passengers)">
                                 SUV Plus EV (8 Passengers)
                               </option>
                             </select>
@@ -643,7 +648,7 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
                             </label>
                             <input
                               type="text"
-                              defaultValue={carCount[index].model}
+                              // defaultValue={carCount[index].model}
                               value={carCount[index].model}
                               onChange={(event) =>
                                 handleFormChange(index, event, true, false)
@@ -682,7 +687,8 @@ const numbe=['First','Second','Third','Fourth','Fifth','Sixth','Seventh'];
 
                 {carev && (
                   <div  className="flex justify-start">
-                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>=1? "":"dis"}`}>
+                    {/* {console.log(carCount.length)} */}
+                    {<button onClick={subField} className={`btn btn-xs btx btxx ${carCount.length>1? "":"dis"}`}>
                       <AiFillMinusCircle></AiFillMinusCircle> view previous cars 
                     </button>}
                     <button onClick={addField} className={`mx-10 btn btn-xs btn-primary ${carCount.length<1 &&"mak"}`}>

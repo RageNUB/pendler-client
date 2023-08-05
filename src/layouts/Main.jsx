@@ -20,8 +20,6 @@ const Main = () => {
     }
   }, [location]);
 
-  console.log(location.pathname);
-
   return (
     <div>
       <Outlet></Outlet>
